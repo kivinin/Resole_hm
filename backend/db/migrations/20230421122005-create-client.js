@@ -1,34 +1,25 @@
+"use strict";
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Ratings', {
+    await queryInterface.createTable("Clients", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      user_id: {
+      name: {
         allowNull: false,
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'Users',
-          key: 'id',
-        },
-        onDelete: 'CASCADE',
+        type: Sequelize.TEXT,
       },
-      film_id: {
+      number: {
         allowNull: false,
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'Films',
-          key: 'id',
-        },
-        onDelete: 'CASCADE',
+        type: Sequelize.TEXT,
       },
-      rate: {
+      adress: {
         allowNull: false,
-        type: Sequelize.INTEGER,
+        type: Sequelize.TEXT,
       },
       createdAt: {
         allowNull: false,
@@ -40,7 +31,7 @@ module.exports = {
       },
     });
   },
-  async down(queryInterface) {
-    await queryInterface.dropTable('Ratings');
+  async down(queryInterface, Sequelize) {
+    await queryInterface.dropTable("Clients");
   },
 };
