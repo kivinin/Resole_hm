@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-function Navbar() {
+function Navbar(): JSX.Element {
 
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
