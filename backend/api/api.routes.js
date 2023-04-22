@@ -14,13 +14,13 @@ router
   .post("/client", async (req, res) => {
     try {
       const { name, number, adress } = req.body;
+      const uniqKey = Math.random().toString(36).slice(-8);
       const clients = await Client.create({ name, number, adress });
-
       const customers = await Service_order.create({
         client_id: clients.id,
         service_id: 1,
         status: false,
-        unique_key: "123456",
+        unique_key: uniqKey,
       });
 
       res.json(clients, customers);

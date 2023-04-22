@@ -1,4 +1,6 @@
-import { Customer, Service } from "./types/Customer";
+import { Customer } from "./types/Customer";
+import { Service } from "./types/Service";
+
 
 // export const getUsers = async (): Promise<Customer[]> => {
 //   const res = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -30,7 +32,7 @@ export const postCustomer = async (obj: Customer): Promise<Customer> => {
 };
 
 
-export const getService = async (obj: Service): Promise<Service> => {
+export const getService = async (): Promise<Service[]> => {
   const res = await fetch("http://localhost:4000/api/service", {
   });
   if (!res.ok) {
