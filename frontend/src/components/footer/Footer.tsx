@@ -3,10 +3,7 @@ import { MDBFooter } from "mdb-react-ui-kit";
 import MapYandex from "../map/MapYandex";
 
 
-function Footer(): JSX.Element {
-
-
-  
+function Footer(): JSX.Element {  
   return (
     <MDBFooter bgColor="light" className="text-center text-lg-left footer">
       <div
