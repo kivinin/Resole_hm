@@ -4,10 +4,10 @@ import MainPage from '../components/main/MainPage';
 import Navbar from '../components/navbar/Navbar';
 import Footer from '../components/footer/Footer';
 import SliderPhoto from '../components/features/SliderPhoto/SliderPhoto';
-
 import Video from '../components/features/Video/Video';
+import ModalOrder from '../components/Modal/ModalOrder';
 
-import Map from '../components/map/MapYandex';
+// import Map from '../components/map/MapYandex';
 
 
 function App(): JSX.Element {
@@ -18,6 +18,7 @@ function App(): JSX.Element {
       <Video />
       <MainPage />
       <SliderPhoto />
+      <ModalOrder />
       <Footer />
 
     </div>

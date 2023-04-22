@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { Service, Client, Service_order } = require("../db/models");
 
 router
-  .get("/services", async (req, res) => {
+  .get("/service", async (req, res) => {
     try {
       const services = await Service.findAll({ raw: true });
       res.json(services);
