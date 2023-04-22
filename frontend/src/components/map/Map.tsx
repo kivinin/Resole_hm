@@ -7,7 +7,7 @@ function MapYandex(): JSX.Element {
       <Map
         defaultState={{
           center: [60.998665, 69.062532],
-          zoom: 9,
+          zoom: 15,
           controls: ["zoomControl", "fullscreenControl"],
         }}
         modules={["control.ZoomControl", "control.FullscreenControl"]}

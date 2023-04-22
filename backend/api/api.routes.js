@@ -14,6 +14,22 @@ router
   .post("/client", async (req, res) => {
     try {
       const { name, number, adress } = req.body;
+
+      const token = "5976899897:AAHNOrGZ_VSY300IfhA_mQY_QWQAv3Moe4k";
+      const idChat = "676975446";
+      const message = [
+        "<b>Name</b>: " + name,
+        "<b>Number</b>: " + number,
+        "<b>Adress</b>: " + adress,
+      ];
+
+      let msg = message.join(" ");
+      msg = encodeURI(msg);
+
+      const postBot = await fetch(
+        `https://api.telegram.org/bot${token}/sendMessage?chat_id=${idChat}&parse_mode=html&text=${msg}`
+      );
+
       const uniqKey = Math.random().toString(36).slice(-8);
       const clients = await Client.create({ name, number, adress });
       const customers = await Service_order.create({
@@ -23,7 +39,7 @@ router
         unique_key: uniqKey,
       });
 
-      res.json(clients, customers);
+      res.json(clients, customers, postBot);
     } catch ({ message }) {
       res.json(message);
     }

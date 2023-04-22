@@ -9,7 +9,7 @@ import ModalOrder from "../components/Modal/ModalOrder";
 import { getService } from "../json/jsonSlice";
 import { useAppDispatch } from "../store";
 import ServiceList from "../components/services/ServiceList";
-import MapYandex from "../components/map/Map";
+
 
 // import Map from '../components/map/MapYandex';
 
@@ -27,7 +27,6 @@ function App(): JSX.Element {
       <MainPage />
       <SliderPhoto />
       <ModalOrder />
-      <MapYandex />
       <ServiceList />
       <Footer />
     </div>
