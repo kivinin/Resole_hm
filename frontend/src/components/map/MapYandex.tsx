@@ -1,18 +1,18 @@
 import React from "react";
-import { YMaps, Map, Placemark } from "react-yandex-maps";
+// import { YMaps, Map, Placemark } from "react-yandex-maps";
 
 function MapYandex(): JSX.Element {
-  const defaultState = {
-    center: [59.94183922709321, 30.359478205462246],
-    zoom: 15,
-  };
+  // const defaultState = {
+  //   center: [59.94183922709321, 30.359478205462246],
+  //   zoom: 15,
+  // };
 
   return (
     <div>
-      <YMaps>
+      {/* <YMaps>
         <Map
           defaultState={defaultState}
-          style={{
+           style={{
             width: "1000px",
             height: "300px",
         
@@ -20,7 +20,7 @@ function MapYandex(): JSX.Element {
         >
           <Placemark geometry={[59.94183922709321, 30.359478205462246]} />
         </Map>
-      </YMaps>
+      </YMaps> */}
     </div>
   );
 }

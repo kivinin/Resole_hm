@@ -1,37 +1,36 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { State } from './types/State';
-import * as api from './api';
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { State } from "./types/State";
+import * as api from "./api";
+import { Customer } from "./types/Customer";
 
 const initialState: State = {
-  jsons: [],
+  customers: [],
   error: undefined,
 };
 
-export const getUsers = createAsyncThunk('json/getUser', () => api.getUsers());
-
-export const removeUser = createAsyncThunk('json/removeUser', (userId: number) =>
-  api.removeUser(userId)
+export const postClient = createAsyncThunk("postClient", (action:Customer) =>
+  api.postCustomer(action)
 );
 
 const jsonSlice = createSlice({
-  name: 'json',
+  name: "json",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder
-      .addCase(getUsers.fulfilled, (state, action) => {
-        state.jsons = action.payload;
-      })
-      .addCase(getUsers.rejected, (state, action) => {
-        state.error = action.error.message;
-      })
-      .addCase(removeUser.fulfilled, (state, action) => {
-        state.jsons = state.jsons.filter((json) => json.id !== action.payload);
-      })
-      .addCase(removeUser.rejected, (state, action) => {
-        state.error = action.error.message;
-      });
+    builder.addCase(postClient.fulfilled, (state, action) => {
+      state.customers.push(action.payload);
+    })
+    .addCase(postClient.rejected, (state, action) => {
+      state.error = action.error.message;
+    });
+    // .addCase(removeUser.fulfilled, (state, action) => {
+    //   state.jsons = state.jsons.filter((json) => json.id !== action.payload);
+    // })
+    // .addCase(removeUser.rejected, (state, action) => {
+    //   state.error = action.error.message;
+    // });
   },
 });
+
 
 export default jsonSlice.reducer;
