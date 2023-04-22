@@ -16,6 +16,9 @@ function ServiceItem({
       <h2>{service.service_name}</h2>
       <h2>{service.price}</h2>
       <h2>{service.service_description}</h2>
+      <div>
+        <img src={`${service.service_image}`} />
+      </div>
     </div>
   );
 }

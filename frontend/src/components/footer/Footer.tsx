@@ -1,5 +1,6 @@
 import React from "react";
 import { MDBFooter } from "mdb-react-ui-kit";
+import MapYandex from "../map/Map";
 
 function Footer(): JSX.Element {
   return (
@@ -10,6 +11,7 @@ function Footer(): JSX.Element {
       >
         &copy; {new Date().getFullYear()} Copyright:{" "}
         <a className="text-dark" href="https://mdbootstrap.com/">
+          <MapYandex/>
           MDBootstrap.com
         </a>
       </div>
