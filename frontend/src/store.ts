@@ -9,6 +9,7 @@ const store = configureStore({
   // теперь функция combineReducers не нужна
   reducer: {
     jsons: jsonSlice,
+    service: jsonSlice
   },
 });
 
