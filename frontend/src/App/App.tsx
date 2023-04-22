@@ -4,14 +4,16 @@ import MainPage from '../components/main/MainPage';
 import Navbar from '../components/navbar/Navbar';
 import Footer from '../components/footer/Footer';
 import SliderPhoto from '../components/features/SliderPhoto/SliderPhoto';
+import Video from '../components/features/Video/Video';
 
-function App():JSX.Element {
+function App(): JSX.Element {
   return (
     <div className="App">
-        <Navbar/>
-      <MainPage/>
-      <Footer/>
+      <Navbar />
+      <Video />
+      <MainPage />
       <SliderPhoto />
+      <Footer />
     </div>
   );
 }
