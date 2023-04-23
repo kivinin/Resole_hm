@@ -26,17 +26,17 @@ function ModalOrder(): JSX.Element {
         <input
           onChange={(e) => setName(e.target.value)}
           value={name}
-          type="password"
+          type="name"
           className="form-control"
-          placeholder="Password"
+          placeholder="Имя"
         />
       </div>
       <div className="col-auto">
         <label className="visually-hidden">number</label>
         <input
-          type="password"
+          type="number"
           className="form-control"
-          placeholder="Password"
+          placeholder="Мобильный телефон"
           onChange={(e) => setNumber(e.target.value)}
           value={number}
         />
@@ -44,9 +44,9 @@ function ModalOrder(): JSX.Element {
       <div className="col-auto">
         <label className="visually-hidden">adress</label>
         <input
-          type="password"
+          type="adress"
           className="form-control"
-          placeholder="Password"
+          placeholder="Адрес"
           onChange={(e) => setAdress(e.target.value)}
           value={adress}
         />
