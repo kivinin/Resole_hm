@@ -1,0 +1,9 @@
+.card {
+  display: grid;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 400%;
+  left: 40%;
+  flex-direction: row;
+}

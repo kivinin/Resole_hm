@@ -1,5 +1,14 @@
-const router = require('express').Router();
-const { Service, Client, Service_order } = require('../db/models');
+
+const router = require("express").Router();
+const {
+  Service,
+  Client,
+  Cart,
+  Service_order,
+  Product,
+  Order,
+} = require("../db/models");
+
 
 router
   .get('/service', async (req, res) => {
@@ -11,7 +20,40 @@ router
     }
   })
 
-  .post('/client', async (req, res) => {
+
+  .get("/products", async (req, res) => {
+    try {
+      const products = await Product.findAll({ raw: true });
+      res.json(products);
+    } catch ({ message }) {
+      res.json(message);
+    }
+  })
+
+  .post("/order", async (req, res) => {
+    try {
+      const { name, number, carts } = req.body;
+      //      console.log(name, number, carts);
+      const adress = "";
+      const clients = await Client.create({ name, number, adress });
+      const cart = await Cart.create({ product_id: carts[0].id, quantity: 1 });
+
+      const order = await Order.create({
+        client_id: clients.id,
+        status: false,
+        cart_id: cart.id,
+      });
+
+      res.json(clients, cart, order);
+    } catch ({ message }) {
+      res.json(message);
+    }
+  })
+
+  .post("/client", async (req, res) => {
+
+
+
     try {
       const { name, number, adress } = req.body;
 
