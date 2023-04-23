@@ -7,11 +7,13 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 const apiRouter = require('./api/api.routes');
+const apiAuthRouter = require('./api/api.auth.routes');
 const authRouter = require('./routes/auth.routes');
 
 serverConfig(app);
 
 app.use('/api', apiRouter);
+app.use('/api/auth', apiAuthRouter);
 app.use('/auth', authRouter);
 
 app.listen(PORT, () => {
