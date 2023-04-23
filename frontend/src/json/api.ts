@@ -1,5 +1,4 @@
 
-
 import { Customer } from './types/Customer';
 import { Service } from './types/Service';
 
@@ -10,6 +9,7 @@ export const postCustomer = async (obj: Customer): Promise<Customer> => {
     method: 'POST',
     credentials: 'include',
     headers: { 'Content-Type': 'application/json' },
+
 
     body: JSON.stringify(obj),
   });
@@ -24,8 +24,6 @@ export const getService = async (): Promise<Service[]> => {
 
   const res = await fetch("/api/service", {
   });
-
-
   if (!res.ok) {
     const { message } = await res.json();
     throw message;

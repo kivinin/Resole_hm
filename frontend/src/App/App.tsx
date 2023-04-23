@@ -1,3 +1,6 @@
+
+import NotFound from "../components/404/NotFound";
+import { Route, Routes } from "react-router";
 import React, { useEffect } from 'react';
 import './App.css';
 import MainPage from '../components/main/MainPage';
@@ -11,7 +14,7 @@ import { useAppDispatch } from '../store';
 import ServiceList from '../components/services/ServiceList';
 import Login from '../components/Auth/Login';
 
-// import Map from '../components/map/MapYandex';
+
 
 function App(): JSX.Element {
   const dispatch = useAppDispatch();
@@ -22,14 +25,14 @@ function App(): JSX.Element {
 
   return (
     <div className="App">
-      <Navbar />
-      <Video />
-      <MainPage />
-      <Login />
-      <SliderPhoto />
-      <ModalOrder />
-      <ServiceList />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Navbar />}>
+          <Route index element={<MainPage />} />/
+        
+        </Route>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+
     </div>
   );
 }
