@@ -1,8 +1,8 @@
-const router = require("express").Router();
-const { Service, Client, Service_order } = require("../db/models");
+const router = require('express').Router();
+const { Service, Client, Service_order } = require('../db/models');
 
 router
-  .get("/service", async (req, res) => {
+  .get('/service', async (req, res) => {
     try {
       const services = await Service.findAll({ raw: true });
       res.json(services);
@@ -11,19 +11,19 @@ router
     }
   })
 
-  .post("/client", async (req, res) => {
+  .post('/client', async (req, res) => {
     try {
       const { name, number, adress } = req.body;
 
-      const token = "5976899897:AAHNOrGZ_VSY300IfhA_mQY_QWQAv3Moe4k";
-      const idChat = "676975446";
+      const token = '5976899897:AAHNOrGZ_VSY300IfhA_mQY_QWQAv3Moe4k';
+      const idChat = '676975446';
       const message = [
-        "<b>Name</b>: " + name,
-        "<b>Number</b>: " + number,
-        "<b>Adress</b>: " + adress,
+        '<b>Name</b>: ' + name,
+        '<b>Number</b>: ' + number,
+        '<b>Adress</b>: ' + adress,
       ];
 
-      let msg = message.join(" ");
+      let msg = message.join(' ');
       msg = encodeURI(msg);
 
       const postBot = await fetch(
@@ -45,7 +45,7 @@ router
     }
   })
 
-  .delete("/films/:filmId", async (req, res) => {
+  .delete('/films/:filmId', async (req, res) => {
     try {
       const { filmId } = req.params;
       const result = await Film.destroy({ where: { id: filmId } });
@@ -58,7 +58,7 @@ router
     }
   });
 
-router.get("/users", async (req, res) => {
+router.get('/users', async (req, res) => {
   try {
     const users = await User.findAll({ raw: true });
     res.json(users);
