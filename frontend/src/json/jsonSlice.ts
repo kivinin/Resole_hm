@@ -6,6 +6,8 @@ import { Customer } from "./types/Customer";
 const initialState: State = {
   customers: [],
   services: [],
+  products: [],
+  carts: [],
   error: undefined,
 };
 
@@ -16,11 +18,21 @@ export const postClient = createAsyncThunk("postClient", (action: Customer) =>
 export const getService = createAsyncThunk("getService", () =>
   api.getService()
 );
+export const getProduct = createAsyncThunk("getProduct", () =>
+  api.getProduct()
+);
 
 const jsonSlice = createSlice({
   name: "json",
   initialState,
-  reducers: {},
+  reducers: {
+    addCart: (state, action) => {
+      const [item] = state.products.filter(
+        (product) => product.id === action.payload
+      );
+      state.carts.push(item);
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(postClient.fulfilled, (state, action) => {
@@ -36,13 +48,16 @@ const jsonSlice = createSlice({
       .addCase(getService.rejected, (state, action) => {
         state.error = action.error.message;
       });
-    // .addCase(removeUser.fulfilled, (state, action) => {
-    //   state.jsons = state.jsons.filter((json) => json.id !== action.payload);
-    // })
-    // .addCase(removeUser.rejected, (state, action) => {
-    //   state.error = action.error.message;
-    // });
+    builder
+      .addCase(getProduct.fulfilled, (state, action) => {
+        state.products = action.payload;
+      })
+      .addCase(getProduct.rejected, (state, action) => {
+        state.error = action.error.message;
+      });
   },
 });
+
+export const { addCart } = jsonSlice.actions
 
 export default jsonSlice.reducer;

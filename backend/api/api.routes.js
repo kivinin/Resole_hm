@@ -1,11 +1,21 @@
 const router = require("express").Router();
-const { Service, Client, Service_order } = require("../db/models");
+const { Service, Client, Service_order, Product  } = require("../db/models");
 
 router
   .get("/service", async (req, res) => {
     try {
       const services = await Service.findAll({ raw: true });
       res.json(services);
+    } catch ({ message }) {
+      res.json(message);
+    }
+  })
+
+
+  .get("/products", async (req, res) => {
+    try {
+      const products = await Product.findAll({ raw: true });
+      res.json(products);
     } catch ({ message }) {
       res.json(message);
     }

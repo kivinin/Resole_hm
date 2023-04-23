@@ -1,6 +1,7 @@
 import React from "react";
 
 function ServiceItem({
+  
   service,
 }: {
   service: {
@@ -11,6 +12,9 @@ function ServiceItem({
     service_image: string;
   };
 }): JSX.Element {
+
+
+
   return (
     <div>
       <h2>{service.service_name}</h2>

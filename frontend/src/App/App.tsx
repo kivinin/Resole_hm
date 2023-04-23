@@ -7,9 +7,10 @@ import SliderPhoto from "../components/features/SliderPhoto/SliderPhoto";
 import Video from "../components/features/Video/Video";
 import ModalOrder from "../components/Modal/ModalOrder";
 import { getService } from "../json/jsonSlice";
+import { getProduct } from "../json/jsonSlice";
 import { useAppDispatch } from "../store";
 import ServiceList from "../components/services/ServiceList";
-
+import ProductList from "../components/productCart/ProductList";
 
 // import Map from '../components/map/MapYandex';
 
@@ -20,6 +21,10 @@ function App(): JSX.Element {
     dispatch(getService());
   }, [dispatch]);
 
+  useEffect(() => {
+    dispatch(getProduct());
+  }, [dispatch]);
+
   return (
     <div className="App">
       <Navbar />
@@ -28,6 +33,7 @@ function App(): JSX.Element {
       <SliderPhoto />
       <ModalOrder />
       <ServiceList />
+      <ProductList />
       <Footer />
     </div>
   );
