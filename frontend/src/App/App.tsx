@@ -9,9 +9,8 @@ import ModalOrder from "../components/Modal/ModalOrder";
 import { getService } from "../json/jsonSlice";
 import { useAppDispatch } from "../store";
 import ServiceList from "../components/services/ServiceList";
-
-
-// import Map from '../components/map/MapYandex';
+import NotFound from "../components/404/NotFound";
+import { Route, Routes } from "react-router";
 
 function App(): JSX.Element {
   const dispatch = useAppDispatch();
@@ -22,13 +21,17 @@ function App(): JSX.Element {
 
   return (
     <div className="App">
-      <Navbar />
-      <Video />
-      <MainPage />
-      <SliderPhoto />
-      <ModalOrder />
-      <ServiceList />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Navbar />}>
+          <Route index element={<MainPage />} />/
+          {/* <Route index element={<Video />} />
+          <Route index element={<SliderPhoto />} />
+          <Route index element={<ModalOrder />} />
+          <Route index element={<ServiceList />} />
+          <Route index element={<Footer />} /> */}
+        </Route>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 }
