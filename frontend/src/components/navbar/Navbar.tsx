@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -11,12 +12,14 @@ function Navbar(): JSX.Element {
   // if ('id' in user) {
   //   navigate('/');
 
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           Navbar
         </a>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -28,6 +31,7 @@ function Navbar(): JSX.Element {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
+
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
             <a className="nav-link active" aria-current="page" href="#">
@@ -39,8 +43,10 @@ function Navbar(): JSX.Element {
             <a className="nav-link" href="#">
               Pricing
             </a>
+
             <button onClick={() => dispatch(logoutUser())}>Выйти</button>
             <a className="nav-link disabled">Disabled</a>
+
           </div>
         </div>
       </div>
