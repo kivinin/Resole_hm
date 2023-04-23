@@ -1,13 +1,18 @@
+
 import React, { useState } from "react";
 import "./StyleNavbar.css";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store";
 import ModalCart from "../Modal/ModalCart";
+import { Outlet } from "react-router";
+import { useNavigate } from 'react-router-dom';
+import { useAppDispatch } from '../../store';
 
 function Navbar(): JSX.Element {
   const { carts } = useSelector((store: RootState) => store.carts);
   const [modal, setModal] = useState(false);
-
+ const navigate = useNavigate();
+  const dispatch = useAppDispatch();
   const clickModal = (): void => {
     setModal((prev) => !prev);
   };
@@ -15,6 +20,7 @@ function Navbar(): JSX.Element {
   console.log(carts[0]);
 
   return (
+  <>
     <nav className="navbar navbar-expand-lg bg-body-tertiary navBarScroll">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
@@ -62,10 +68,13 @@ function Navbar(): JSX.Element {
               <ModalCart />
             </>
           )}
+          <button onClick={() => dispatch(logoutUser())}>Выйти</button>
           {carts.length}
         </div>
       </div>
     </nav>
+         <Outlet />
+         </>
   );
 }
 
