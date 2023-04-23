@@ -1,8 +1,13 @@
 import React from "react";
 import { useState } from "react";
 import { Outlet } from "react-router";
+import { useNavigate } from 'react-router-dom';
+import { useAppDispatch } from '../../store';
+import { logoutUser } from '../Auth/authSlice';
 
 function Navbar(): JSX.Element {
+ const navigate = useNavigate();
+  const dispatch = useAppDispatch();
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -21,12 +26,14 @@ function Navbar(): JSX.Element {
               <a className="nav-link" href="#">
                 Pricing
               </a>
+               <button onClick={() => dispatch(logoutUser())}>Выйти</button>
             </div>
           </div>
         </div>
       </nav>
       <Outlet />
     </>
+
   );
 }
 
