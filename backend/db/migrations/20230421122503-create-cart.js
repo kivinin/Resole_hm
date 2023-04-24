@@ -16,6 +16,13 @@ module.exports = {
           key: "id",
         },
       },
+      order_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: "Orders",
+          key: "id",
+        },
+      },
       quantity: {
         type: Sequelize.INTEGER,
       },

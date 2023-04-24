@@ -17,7 +17,7 @@ const store = configureStore({
     service: jsonSlice,
 
     products: jsonSlice,
-    carts: jsonSlice
+    carts: jsonSlice,
 
     auth: authSlice,
 

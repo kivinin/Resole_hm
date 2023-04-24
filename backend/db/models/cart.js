@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
   class Cart extends Model {
     static associate({ Product, Order }) {
       this.belongsTo(Product, { foreignKey: "product_id" });
-      this.hasOne(Order, { foreignKey: "cart_id" });
+      this.belongsTo(Order, { foreignKey: "order_id" });
     }
   }
   Cart.init(
@@ -13,6 +13,13 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         references: {
           model: "Products",
+          key: "id",
+        },
+      },
+      order_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: "Orders",
           key: "id",
         },
       },
