@@ -1,17 +1,17 @@
-import React from "react";
-import { MDBFooter } from "mdb-react-ui-kit";
-import MapYandex from "../map/Map";
+import React from 'react';
+import { MDBFooter } from 'mdb-react-ui-kit';
+import MapYandex from '../map/Map';
 
 function Footer(): JSX.Element {
   return (
     <MDBFooter bgColor="light" className="text-center text-lg-left footer">
       <div
         className="text-center p-3"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+        style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}
       >
-        &copy; {new Date().getFullYear()} Copyright:{" "}
+        &copy; {new Date().getFullYear()} Copyright:{' '}
         <a className="text-dark" href="https://mdbootstrap.com/">
-          <MapYandex/>
+          <MapYandex />
           MDBootstrap.com
         </a>
       </div>

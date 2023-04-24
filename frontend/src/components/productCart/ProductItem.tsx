@@ -1,13 +1,9 @@
-import React, { useState } from "react";
-import { useAppDispatch } from "../../store";
-import { addCart } from "../../json/jsonSlice";
-import { Product } from "../../json/types/Product";
+import React, { useState } from 'react';
+import { useAppDispatch } from '../../store';
+import { addCart } from '../../json/jsonSlice';
+import { Product } from '../../json/types/Product';
 
-function ProductItem({
-  product,
-}: {
-  product: Product
-}): JSX.Element {
+function ProductItem({ product }: { product: Product }): JSX.Element {
   const dispatch = useAppDispatch();
 
   return (
@@ -16,7 +12,7 @@ function ProductItem({
       <h2>{product.product_price}</h2>
       <h2>{product.product_description}</h2>
       <div>
-        <img src={`${product.product_image}`} />
+        <img src={`${product.product_image}`} alt="photo" />
       </div>
       <button onClick={() => dispatch(addCart(product.id))} type="button">
         в корзину
