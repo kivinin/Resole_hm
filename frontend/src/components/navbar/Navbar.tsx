@@ -6,7 +6,9 @@ import ModalCart from '../Modal/ModalCart';
 import { Outlet } from 'react-router';
 import { useNavigate } from 'react-router-dom';
 import { useAppDispatch } from '../../store';
+
 import { logoutUser } from '../Auth/authSlice';
+
 
 function Navbar(): JSX.Element {
   const { carts } = useSelector((store: RootState) => store.carts);

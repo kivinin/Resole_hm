@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
   class Order extends Model {
     static associate({ Client, Cart }) {
       this.belongsTo(Client, { foreignKey: "client_id" });
-      this.belongsTo(Cart, { foreignKey: "cart_id" });
+      this.hasMany(Cart, { foreignKey: "order_id" });
 
     }
   }
@@ -22,14 +22,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         type: DataTypes.BOOLEAN,
       },
-      cart_id: {
-        allowNull: false,
-        type: DataTypes.INTEGER,
-        references: {
-          model: "Carts",
-          key: "id",
-        },
-      },
+      
     },
     {
       sequelize,
