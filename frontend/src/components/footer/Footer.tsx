@@ -8,11 +8,11 @@ function Footer(): JSX.Element {
     <MDBFooter bgColor="light" className="text-center text-lg-left footer">
       <div
         className="text-center p-3"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+        style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}
       >
-        &copy; {new Date().getFullYear()} Copyright:{" "}
+        &copy; {new Date().getFullYear()} Copyright:{' '}
         <a className="text-dark" href="https://mdbootstrap.com/">
-          <MapYandex/>
+          <MapYandex />
           MDBootstrap.com
         </a>
         <div className="social telegram">

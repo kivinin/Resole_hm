@@ -8,7 +8,7 @@ import Footer from "../footer/Footer";
 function MainPage(): JSX.Element {
   return (
     <div>
-      <h1 style={{ color: "white" }}>Main Page</h1>
+      {/* <h1 style={{ color: "white" }}>Main Page</h1> */}
       <Video />
       <SliderPhoto />
       <ModalOrder />
