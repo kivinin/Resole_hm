@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import PhoneInput from 'react-phone-number-input/input';
-import { useSelector } from 'react-redux';
-import { RootState, useAppDispatch } from '../../store';
+// import PhoneInput from 'react-phone-number-input/input';
+import { useAppDispatch } from '../../store';
 import { postClient } from '../../json/jsonSlice';
 
 function ModalOrder(): JSX.Element {

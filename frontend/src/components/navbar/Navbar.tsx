@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
 import './StyleNavbar.css';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../store';
-import ModalCart from '../Modal/ModalCart';
 import { Outlet } from 'react-router';
-import { useNavigate } from 'react-router-dom';
-import { useAppDispatch } from '../../store';
+import { RootState, useAppDispatch } from '../../store';
+import ModalCart from '../Modal/ModalCart';
 import { logoutUser } from '../Auth/authSlice';
-
 
 function Navbar(): JSX.Element {
   const { carts } = useSelector((store: RootState) => store.carts);
   const [modal, setModal] = useState(false);
-  const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const clickModal = (): void => {
     setModal((prev) => !prev);
@@ -36,7 +32,7 @@ function Navbar(): JSX.Element {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
@@ -52,24 +48,28 @@ function Navbar(): JSX.Element {
               <a className="nav-link disabled"> </a>
             </div>
             {!modal ? (
-              <button onClick={clickModal}>
+              <button type="button" onClick={clickModal}>
                 <img
                   style={{ width: '40px', height: '40px' }}
                   src="https://img.freepik.com/premium-vector/shopping-cart-icon-in-black-basket-vector-on-isolated-white-background-eps-10_399089-2824.jpg"
+                  alt=" "
                 />
               </button>
             ) : (
               <>
-                <button onClick={clickModal}>
+                <button type="button" onClick={clickModal}>
                   <img
                     style={{ width: '40px', height: '40px' }}
                     src="https://img.freepik.com/premium-vector/shopping-cart-icon-in-black-basket-vector-on-isolated-white-background-eps-10_399089-2824.jpg"
+                    alt=""
                   />
                 </button>
                 <ModalCart />
               </>
             )}
-            <button onClick={() => dispatch(logoutUser())}>Выйти</button>
+            <button type="button" onClick={() => dispatch(logoutUser())}>
+              Выйти
+            </button>
             {carts.length}
           </div>
         </div>

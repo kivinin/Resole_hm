@@ -1,7 +1,7 @@
-import { Customer } from "./Customer";
-import { Service } from "./Service";
-import { Product } from "./Product";
-import { Order } from "./Order";
+import { Customer } from './Customer';
+import { Service } from './Service';
+import { Product } from './Product';
+import { Order } from './Order';
 
 export type State = {
   customers: Customer[];

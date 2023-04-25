@@ -10,14 +10,11 @@ import Login from '../components/Auth/Login';
 import SerchOrderList from '../components/SerchOrder/SerchOrderList';
 import { getServiceOrders } from '../components/SerchOrder/SerchOrderSlice';
 import UpdateFormOrderItem from '../components/SerchOrder/UpdateFormOrderItem';
-import { getProduct } from '../json/jsonSlice';
-import { useAppDispatch } from '../store';
+
 import NotFound from '../components/404/NotFound';
 
 // import ServiceList from '../components/services/ServiceList';
 // import ProductList from '../components/productCart/ProductList';
-
-
 
 function App(): JSX.Element {
   const dispatch = useAppDispatch();

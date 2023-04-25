@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { loginUser } from './authSlice';
 import { RootState, useAppDispatch } from '../../store';
@@ -9,9 +9,8 @@ function Login(): JSX.Element {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const navigate = useNavigate();
   const dispatch = useAppDispatch();
-  const { user, error } = useSelector((store: RootState) => store.auth);
+  const { error } = useSelector((store: RootState) => store.auth);
 
   const autorization = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();

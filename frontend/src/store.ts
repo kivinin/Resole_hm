@@ -5,11 +5,10 @@ import { useDispatch } from 'react-redux';
 // Слайсы - это отдельные модули нашего приложения. У каждого слайса - свой редьюсер.
 import jsonSlice from './json/jsonSlice';
 
-//import productSlice from './json/productSlice';
+// import productSlice from './json/productSlice';
 
 import authSlice from './components/Auth/authSlice';
 import SerchOrderSlice from './components/SerchOrder/SerchOrderSlice';
-
 
 const store = configureStore({
   // теперь функция combineReducers не нужна
