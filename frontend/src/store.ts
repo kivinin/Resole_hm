@@ -8,6 +8,7 @@ import jsonSlice from './json/jsonSlice';
 //import productSlice from './json/productSlice';
 
 import authSlice from './components/Auth/authSlice';
+import SerchOrderSlice from './components/SerchOrder/SerchOrderSlice';
 
 
 const store = configureStore({
@@ -20,7 +21,7 @@ const store = configureStore({
     carts: jsonSlice,
 
     auth: authSlice,
-
+    service_orders: SerchOrderSlice,
   },
 });
 

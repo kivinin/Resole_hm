@@ -109,4 +109,56 @@ router.get('/users', async (req, res) => {
   }
 });
 
+router.get('/serviceorders', async (req, res) => {
+  try {
+    const servicesorders = await Service_order.findAll({
+      include: { model: Client },
+    });
+
+    res.json(servicesorders);
+  } catch ({ message }) {
+    res.json(message);
+  }
+});
+
+router.delete('/serviceorders/:serviceorderId', async (req, res) => {
+  try {
+    const serviceorder = await Service_order.destroy({
+      where: { id: req.params.serviceorderId },
+    });
+    if (serviceorder > 0) {
+      res.json(req.params.serviceorderId);
+    }
+  } catch (error) {
+    res.send(console.log(error.message));
+  }
+});
+
+router.put('/serviceorders/edit/:serviceorderId', async (req, res) => {
+  console.log('dasdasda');
+  try {
+    const { serviceorderId } = req.params;
+    const { status, before_img, after_img, comments } = req.body;
+    console.log(req.body);
+    if (comments && status) {
+      const serviceorderDB = await Service_order.findOne({
+        where: { id: serviceorderId },
+      });
+      const client = await Client.findOne({
+        where: { id: serviceorderDB.client_id },
+      });
+      serviceorderDB.status = status;
+      serviceorderDB.before_img = before_img;
+      serviceorderDB.after_img = after_img;
+      serviceorderDB.comments = comments;
+      serviceorderDB.save();
+      res.json( serviceorderDB );
+    } else {
+      res.status(500).json({ message: 'Заполни все поля' });
+    }
+  } catch (error) {
+    res.send(console.log(error.message));
+  }
+});
+
 module.exports = router;
