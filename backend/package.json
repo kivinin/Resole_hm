@@ -5,6 +5,9 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js --ext js,json --ignore ./sessions",
+
+    "start": "NODE_ENV=production node app.js",
+ 
     "dbr": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all"
   },
   "keywords": [],

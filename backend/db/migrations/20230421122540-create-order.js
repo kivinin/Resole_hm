@@ -21,14 +21,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.BOOLEAN,
       },
-      cart_id: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-        references: {
-          model: "Carts",
-          key: "id",
-        },
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

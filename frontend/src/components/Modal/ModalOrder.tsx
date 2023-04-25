@@ -10,7 +10,6 @@ function ModalOrder(): JSX.Element {
   const [adress, setAdress] = useState('');
 
   const dispatch = useAppDispatch();
-  const { customers } = useSelector((store: RootState) => store.jsons);
 
   const onHandleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();

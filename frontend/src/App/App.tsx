@@ -5,11 +5,19 @@ import './App.css';
 import MainPage from '../components/main/MainPage';
 import Navbar from '../components/navbar/Navbar';
 import { getService } from '../json/jsonSlice';
+
 import { useAppDispatch } from '../store';
 import Login from '../components/Auth/Login';
 import SerchOrderList from '../components/SerchOrder/SerchOrderList';
 import { getServiceOrders } from '../components/SerchOrder/SerchOrderSlice';
 import UpdateFormOrderItem from '../components/SerchOrder/UpdateFormOrderItem';
+import { getProduct } from '../json/jsonSlice';
+import { useAppDispatch } from '../store';
+
+import ServiceList from '../components/services/ServiceList';
+import ProductList from '../components/productCart/ProductList';
+
+
 
 function App(): JSX.Element {
   const dispatch = useAppDispatch();
@@ -19,6 +27,10 @@ function App(): JSX.Element {
   }, [dispatch]);
   useEffect(() => {
     dispatch(getServiceOrders());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(getProduct());
   }, [dispatch]);
 
   return (
