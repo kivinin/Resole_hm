@@ -61,7 +61,7 @@ function Navbar(): JSX.Element {
                     alt=""
                   />
                 </button>
-                <ModalCart />
+                <ModalCart clickModal={clickModal}/>
               </>
             )}
             <button type="button" onClick={() => dispatch(logoutUser())}>

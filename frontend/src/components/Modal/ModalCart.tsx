@@ -4,7 +4,7 @@ import { RootState, useAppDispatch } from '../../store';
 import ModalCartItem from './ModalCartItem';
 import { postOrder } from '../../json/jsonSlice';
 
-function ModalCart(): JSX.Element {
+function ModalCart({ clickModal }: { clickModal: () => void }): JSX.Element {
   const { carts } = useSelector((store: RootState) => store.carts);
 
   const [name, setName] = useState('');
@@ -18,15 +18,23 @@ function ModalCart(): JSX.Element {
     setName('');
     setNumber('');
   };
+  console.log(carts);
 
   return (
     <div className="card">
-      <h5 className="card-title">Корзина</h5>
+      <div className="closeModal">
+        <button onClick={clickModal} className="buttonCloseModal">
+          X
+        </button>
+      </div>
+      <h2 className="card-title cartSize">Корзина</h2>
+
       {carts.map((product) => (
         <ModalCartItem key={product.id} product={product} />
       ))}
 
       <form onSubmit={onHandleSubmit} className="row g-3">
+        <div className='formBuy'>
         <div className="col-auto">
           <label className="visually-hidden">name</label>
           <input
@@ -51,6 +59,7 @@ function ModalCart(): JSX.Element {
           <button type="submit" className="btn btn-primary mb-3">
             Купить
           </button>
+        </div>
         </div>
       </form>
     </div>

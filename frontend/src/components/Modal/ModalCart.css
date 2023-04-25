@@ -1,12 +1,4 @@
-.card {
-  display: grid;
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  top: 400%;
-  left: 40%;
-  flex-direction: row;
-}
+
 .modalka {
   z-index: 999999;
   position: fixed;
@@ -19,3 +11,48 @@
   width: 300px;
   height: 400px;
 }
+
+.card {
+  display: grid;
+  position: absolute;
+  border-radius:0;
+  width: 600px;
+  height: auto;
+  top: 150%;
+  left: 40%;
+  flex-direction: row;
+}
+.ModalCartItem{
+    display: flex;
+    justify-content: space-around;
+}
+.closeModal{
+    display: flex;
+    border-right: 30px solid white;
+    border-left: 30px solid white;
+    padding: 12px 2px;
+}
+.buttonCloseModal{
+    border-radius:50%;
+    width:30px;
+    height: 30px;
+}
+.cartSize{
+    font-size: 35px;
+}
+.thClass {
+    font-weight: normal;
+    border-bottom: 2px solid #6678b1;
+    border-right: 30px solid white;
+    border-left: 30px solid white;
+    padding: 8px 2px;
+  }
+  td {
+    border-right: 30px solid white;
+    border-left: 30px solid white;
+    padding: 12px 2px;
+  }
+  .formBuy{
+    display: flex;
+    justify-content: space-evenly;
+  }
