@@ -6,6 +6,8 @@ import Footer from '../footer/Footer';
 import ProductList from '../productCart/ProductList';
 import ModalSearchOrder from '../ModalSearchOrder/ModalSearchOrder';
 import Swiper22 from '../Swiper/Swiper22';
+import Rull from '../rullWork/Rull';
+import FeedBack from '../feedBack/FeedBack';
 // import ModalOrder from '../Modal/ModalOrder';
 
 function MainPage(): JSX.Element {
@@ -17,6 +19,8 @@ function MainPage(): JSX.Element {
       <ServiceList />
       <ProductList />
       <Swiper22 />
+      <Rull />
+      <FeedBack/>
       <Footer />
     </div>
   );

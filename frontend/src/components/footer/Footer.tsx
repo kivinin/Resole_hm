@@ -55,7 +55,7 @@ function Footer(): JSX.Element {
           </svg>
         </a>
       <div>
-      <img className="tn-atom__img t-img loaded" data-original="https://static.tildacdn.com/tild3035-3736-4335-a539-613938626365/HorizontalLogos5.png" imgfield="tn_img_1665930483365" src="https://thumb.tildacdn.com/tild3035-3736-4335-a539-613938626365/-/resize/856x/-/format/webp/HorizontalLogos5.png"/>
+      <img className="tn-atom__img t-img loaded" data-original="https://static.tildacdn.com/tild3035-3736-4335-a539-613938626365/HorizontalLogos5.png"  src="https://thumb.tildacdn.com/tild3035-3736-4335-a539-613938626365/-/resize/856x/-/format/webp/HorizontalLogos5.png"/>
       </div>  
       </div>
       &copy; Made by Elbrus Bears 2023-{new Date().getFullYear()} 

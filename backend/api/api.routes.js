@@ -27,21 +27,38 @@ router
     }
   })
 
-  .post('/order', async (req, res) => {
+  .post("/order", async (req, res) => {
     try {
       const { name, number, carts } = req.body;
       //      console.log(name, number, carts);
-      const adress = '';
-      const clients = await Client.create({ name, number, adress });
-      const cart = await Cart.create({ product_id: carts[0].id, quantity: 1 });
+      const adress = "";
+      const checkNumber = await Client.findAll({ where: { number: number } });
 
+      if (checkNumber.length === 0) {
+        const clients = await Client.create({ name, number, adress });
+      } else {
+        console.log("pusto");
+      }
+      
+      const clientsFind = await Client.findAll({ where: { number: number } });
       const order = await Order.create({
-        client_id: clients.id,
+        client_id: clientsFind[0].id,
         status: false,
-        cart_id: cart.id,
       });
 
-      res.json(clients, cart, order);
+      carts.map(async (cart) => {
+        try {
+          await Cart.create({
+            product_id: cart.id,
+            order_id: order.id,
+            quantity: 1,
+          });
+        } catch (message) {
+          console.log(message);
+        }
+      });
+
+      res.json(order);
     } catch ({ message }) {
       res.json(message);
     }
