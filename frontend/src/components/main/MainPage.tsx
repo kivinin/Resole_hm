@@ -5,17 +5,18 @@ import ServiceList from '../services /ServiceList';
 import Footer from '../footer/Footer';
 import ProductList from '../productCart/ProductList';
 import ModalSearchOrder from '../ModalSearchOrder/ModalSearchOrder';
+import Swiper22 from '../Swiper/Swiper22';
+// import ModalOrder from '../Modal/ModalOrder';
 
 function MainPage(): JSX.Element {
   return (
     <div>
-      {/* <h1 style={{ color: "white" }}>Main Page</h1> */}
       <Video />
       <SliderPhoto />
-      <ModalOrder />
       <ModalSearchOrder />
       <ServiceList />
       <ProductList />
+      <Swiper22 />
       <Footer />
     </div>
   );
