@@ -1,4 +1,6 @@
-.social {display: inline-block;}
+.social {
+    display: inline-block;
+}
 .social a {
 	display: block;
 	width: 48px;
@@ -19,6 +21,21 @@
 	width: 32px;
 	height: 32px;
 }
-.telegram a {background: #249bd7}
-.vk a {background: #4a76a8}
-.whatsapp a {background: #50b154}
+.instagram a {
+    background: #3f729b
+}
+.telegram a {
+    background: #249bd7
+}
+.vk a {
+    background: #4a76a8
+}
+.whatsapp a {
+    background: #50b154
+}
+.btnYandex {
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(223,253,45,1) 100%);
+    border-radius: 5px;
+    padding: 3px;
+}
