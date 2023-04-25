@@ -15,7 +15,7 @@ function ProductItem({ product }: { product: Product }): JSX.Element {
         <img src={`${product.product_image}`} alt="photo" />
       </div>
       <button onClick={() => dispatch(addCart(product.id))} type="button">
-        в корзину
+        в корзину 
       </button>
     </div>
   );
