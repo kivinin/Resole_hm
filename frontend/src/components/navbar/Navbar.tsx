@@ -13,9 +13,6 @@ function Navbar(): JSX.Element {
   const clickModal = (): void => {
     setModal((prev) => !prev);
   };
-
-  console.log(carts[0]);
-
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary navBarScroll">
