@@ -1,8 +1,8 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { State } from "./types/State";
-import * as api from "./api";
-import { Customer } from "./types/Customer";
-import { Order } from "./types/Order";
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { State } from './types/State';
+import * as api from './api';
+import { Customer } from './types/Customer';
+import { Order } from './types/Order';
 
 const initialState: State = {
   customers: [],
@@ -13,25 +13,23 @@ const initialState: State = {
   error: undefined,
 };
 
-export const postClient = createAsyncThunk("postClient", (action: Customer) =>
+export const postClient = createAsyncThunk('postClient', (action: Customer) =>
   api.postCustomer(action)
 );
 
-export const postOrder = createAsyncThunk("postOrder", (action: Order) =>
+export const postOrder = createAsyncThunk('postOrder', (action: Order) =>
   api.postOrder(action)
 );
 
-export const getService = createAsyncThunk("getService", () =>
+export const getService = createAsyncThunk('getService', () =>
   api.getService()
 );
-export const getProduct = createAsyncThunk("getProduct", () =>
+export const getProduct = createAsyncThunk('getProduct', () =>
   api.getProduct()
 );
 
-
-
 const jsonSlice = createSlice({
-  name: "json",
+  name: 'json',
   initialState,
   reducers: {
     addCart: (state, action) => {
@@ -73,6 +71,6 @@ const jsonSlice = createSlice({
   },
 });
 
-export const { addCart } = jsonSlice.actions
+export const { addCart } = jsonSlice.actions;
 
 export default jsonSlice.reducer;

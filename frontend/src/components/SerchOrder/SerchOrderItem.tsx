@@ -1,7 +1,7 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useAppDispatch } from '../../store';
 import { removeServiceOrder } from './SerchOrderSlice';
-import { useNavigate } from 'react-router-dom';
 
 function SerchOrderItem({
   service_order,
@@ -64,7 +64,7 @@ function SerchOrderItem({
                 className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
-              ></button>
+              />
             </div>
             <div className="modal-body">
               <img
@@ -111,7 +111,7 @@ function SerchOrderItem({
                 className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
-              ></button>
+              />
             </div>
             <div className="modal-body">
               <img

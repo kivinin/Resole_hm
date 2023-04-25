@@ -1,22 +1,22 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
-import { RootState, useAppDispatch } from "../../store";
-import ModalCartItem from "./ModalCartItem";
-import { postOrder } from "../../json/jsonSlice";
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { RootState, useAppDispatch } from '../../store';
+import ModalCartItem from './ModalCartItem';
+import { postOrder } from '../../json/jsonSlice';
 
 function ModalCart(): JSX.Element {
   const { carts } = useSelector((store: RootState) => store.carts);
 
-  const [name, setName] = useState("");
-  const [number, setNumber] = useState("");
+  const [name, setName] = useState('');
+  const [number, setNumber] = useState('');
 
   const dispatch = useAppDispatch();
 
   const onHandleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     dispatch(postOrder({ name, number, carts }));
-    setName("");
-    setNumber("");
+    setName('');
+    setNumber('');
   };
 
   return (

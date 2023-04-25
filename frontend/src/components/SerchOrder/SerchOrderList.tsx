@@ -4,6 +4,7 @@ import { RootState } from '../../store';
 import SerchOrderItem from './SerchOrderItem';
 
 function SerchOrderList(): JSX.Element {
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   const { service_orders } = useSelector(
     (store: RootState) => store.service_orders
   );
