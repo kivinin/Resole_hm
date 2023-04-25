@@ -31,6 +31,7 @@ function ModalSearchOrder(): JSX.Element {
       </button>
       <div
         className="modal fade"
+        style={{ top: '200px' }}
         id="exampleModal"
         tabIndex={-1}
         aria-labelledby="exampleModalLabel"

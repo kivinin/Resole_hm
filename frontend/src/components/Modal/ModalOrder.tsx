@@ -20,7 +20,7 @@ function ModalOrder({ clickModal }: { clickModal: () => void }): JSX.Element {
   };
 
   return (
-    <div className="modal">
+    <div className="modalka">
       <form onSubmit={onHandleSubmit} className="row g-3">
         <div className="col-auto">
           <label className="visually-hidden">name</label>
