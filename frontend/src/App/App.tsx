@@ -41,8 +41,8 @@ function App(): JSX.Element {
           <Route index element={<MainPage />} />
           <Route path="/admin" element={<Login />} />
           <Route path="/list" element={<SerchOrderList />} />
-          <Route path="*" element={<NotFound />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
