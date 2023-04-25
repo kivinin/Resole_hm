@@ -7,3 +7,14 @@
   left: 40%;
   flex-direction: row;
 }
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background-color: beige;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 400px;
+}
