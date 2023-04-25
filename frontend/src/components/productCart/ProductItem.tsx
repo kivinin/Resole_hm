@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useAppDispatch } from '../../store';
 import { addCart } from '../../json/jsonSlice';
 import { Product } from '../../json/types/Product';
@@ -12,10 +12,14 @@ function ProductItem({ product }: { product: Product }): JSX.Element {
       <h2>{product.product_price}</h2>
       <h2>{product.product_description}</h2>
       <div>
-        <img src={`${product.product_image}`} alt="photo" />
+        <img src={`${product.product_image}`} alt="" />
       </div>
-      <button onClick={() => dispatch(addCart(product.id))} type="button">
-        в корзину 
+      <button
+        style={{ width: '100px', height: '50px' }}
+        onClick={() => dispatch(addCart(product.id))}
+        type="button"
+      >
+        в корзину
       </button>
     </div>
   );
