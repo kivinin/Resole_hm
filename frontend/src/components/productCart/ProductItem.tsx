@@ -19,7 +19,7 @@ function ProductItem({
         <img src={`${product.product_image}`} />
       </div>
       <button onClick={() => dispatch(addCart(product.id))} type="button">
-        в корзину добавить
+        в корзину 
       </button>
     </div>
   );
