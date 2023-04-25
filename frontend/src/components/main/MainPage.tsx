@@ -5,6 +5,7 @@ import ModalOrder from '../Modal/ModalOrder';
 import ServiceList from '../services/ServiceList';
 import Footer from '../footer/Footer';
 import ProductList from '../productCart/ProductList';
+import ModalSearchOrder from '../ModalSearchOrder/ModalSearchOrder';
 
 function MainPage(): JSX.Element {
   return (
@@ -13,6 +14,7 @@ function MainPage(): JSX.Element {
       <Video />
       <SliderPhoto />
       <ModalOrder />
+      <ModalSearchOrder />
       <ServiceList />
       <ProductList />
       <Footer />

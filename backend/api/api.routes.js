@@ -1,5 +1,4 @@
-
-const router = require("express").Router();
+const router = require('express').Router();
 const {
   Service,
   Client,
@@ -7,8 +6,7 @@ const {
   Service_order,
   Product,
   Order,
-} = require("../db/models");
-
+} = require('../db/models');
 
 router
   .get('/service', async (req, res) => {
@@ -20,8 +18,7 @@ router
     }
   })
 
-
-  .get("/products", async (req, res) => {
+  .get('/products', async (req, res) => {
     try {
       const products = await Product.findAll({ raw: true });
       res.json(products);
@@ -30,11 +27,11 @@ router
     }
   })
 
-  .post("/order", async (req, res) => {
+  .post('/order', async (req, res) => {
     try {
       const { name, number, carts } = req.body;
       //      console.log(name, number, carts);
-      const adress = "";
+      const adress = '';
       const clients = await Client.create({ name, number, adress });
       const cart = await Cart.create({ product_id: carts[0].id, quantity: 1 });
 
@@ -50,10 +47,7 @@ router
     }
   })
 
-  .post("/client", async (req, res) => {
-
-
-
+  .post('/client', async (req, res) => {
     try {
       const { name, number, adress } = req.body;
 
@@ -121,6 +115,19 @@ router.get('/serviceorders', async (req, res) => {
   }
 });
 
+// router.get('/serviceorders/:uniqkey', async (req, res) => {
+//   try {
+//     const { uniqkey } = req.params;
+//     const serviceorder = await Service_order.findOne({
+//       where: { unique_key: uniqkey },
+//       include: { model: Client },
+//     });
+//     res.json(serviceorder);
+//   } catch ({ message }) {
+//     res.json(message);
+//   }
+// });
+
 router.delete('/serviceorders/:serviceorderId', async (req, res) => {
   try {
     const serviceorder = await Service_order.destroy({
@@ -135,11 +142,9 @@ router.delete('/serviceorders/:serviceorderId', async (req, res) => {
 });
 
 router.put('/serviceorders/edit/:serviceorderId', async (req, res) => {
-  console.log('dasdasda');
   try {
     const { serviceorderId } = req.params;
     const { status, before_img, after_img, comments } = req.body;
-    console.log(req.body);
     if (comments && status) {
       const serviceorderDB = await Service_order.findOne({
         where: { id: serviceorderId },
@@ -152,7 +157,7 @@ router.put('/serviceorders/edit/:serviceorderId', async (req, res) => {
       serviceorderDB.after_img = after_img;
       serviceorderDB.comments = comments;
       serviceorderDB.save();
-      res.json( serviceorderDB );
+      res.json(serviceorderDB);
     } else {
       res.status(500).json({ message: 'Заполни все поля' });
     }
