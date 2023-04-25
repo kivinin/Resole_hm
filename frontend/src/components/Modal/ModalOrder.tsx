@@ -1,12 +1,13 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
-import { RootState, useAppDispatch } from "../../store";
-import { postClient } from "../../json/jsonSlice";
+import React, { useState } from 'react';
+import PhoneInput from 'react-phone-number-input/input';
+import { useSelector } from 'react-redux';
+import { RootState, useAppDispatch } from '../../store';
+import { postClient } from '../../json/jsonSlice';
 
 function ModalOrder(): JSX.Element {
-  const [name, setName] = useState("");
-  const [number, setNumber] = useState("");
-  const [adress, setAdress] = useState("");
+  const [name, setName] = useState('');
+  const [number, setNumber] = useState('');
+  const [adress, setAdress] = useState('');
 
   const dispatch = useAppDispatch();
   const { customers } = useSelector((store: RootState) => store.jsons);
@@ -14,9 +15,9 @@ function ModalOrder(): JSX.Element {
   const onHandleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     dispatch(postClient({ name, number, adress }));
-    setName("");
-    setNumber("");
-    setAdress("");
+    setName('');
+    setNumber('');
+    setAdress('');
   };
 
   return (
@@ -34,8 +35,12 @@ function ModalOrder(): JSX.Element {
       <div className="col-auto">
         <label className="visually-hidden">number</label>
         <input
-          type="number"
-          className="form-control"
+          // type="tel"
+          // id="phone"
+          // name="phone"
+          // pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          // required
+          // className="form-control"
           placeholder="Мобильный телефон"
           onChange={(e) => setNumber(e.target.value)}
           value={number}
@@ -52,10 +57,7 @@ function ModalOrder(): JSX.Element {
         />
       </div>
       <div className="col-auto">
-        <button
-          type="submit"
-          className="btn btn-primary mb-3"
-        >
+        <button type="submit" className="btn btn-primary mb-3">
           Confirm identity
         </button>
       </div>
