@@ -1,9 +1,10 @@
-import React from "react";
-import Video from "../features/Video/Video";
-import SliderPhoto from "../features/SliderPhoto/SliderPhoto";
-import ModalOrder from "../Modal/ModalOrder";
-import ServiceList from "../services/ServiceList";
-import Footer from "../footer/Footer";
+import React from 'react';
+import Video from '../features/Video/Video';
+import SliderPhoto from '../features/SliderPhoto/SliderPhoto';
+import ModalOrder from '../Modal/ModalOrder';
+import ServiceList from '../services/ServiceList';
+import Footer from '../footer/Footer';
+import ProductList from '../productCart/ProductList';
 
 function MainPage(): JSX.Element {
   return (
@@ -13,6 +14,7 @@ function MainPage(): JSX.Element {
       <SliderPhoto />
       <ModalOrder />
       <ServiceList />
+      <ProductList />
       <Footer />
     </div>
   );
