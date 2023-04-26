@@ -28,6 +28,32 @@ export const getProduct = createAsyncThunk('getProduct', () =>
   api.getProduct()
 );
 
+export const removeService = createAsyncThunk(
+  'removeService',
+  (serviceId: number) => api.removeService(serviceId)
+);
+
+export const updateService = createAsyncThunk(
+  'updateServiceOrder',
+  (updatedService: {
+    id: number;
+    service_name: string;
+    price: string;
+    service_description: string;
+    service_image: string;
+  }) => api.updateService(updatedService)
+);
+
+export const addNewService = createAsyncThunk(
+  'addNewService',
+  (newService: {
+    service_name: string;
+    price: string;
+    service_description: string;
+    service_image: string;
+  }) => api.addNewService(newService)
+);
+
 const jsonSlice = createSlice({
   name: 'json',
   initialState,
@@ -61,11 +87,38 @@ const jsonSlice = createSlice({
       .addCase(getProduct.rejected, (state, action) => {
         state.error = action.error.message;
       });
-      builder
+    builder
       .addCase(postOrder.fulfilled, (state, action) => {
         state.orders.push(action.payload);
       })
       .addCase(postOrder.rejected, (state, action) => {
+        state.error = action.error.message;
+      })
+      .addCase(removeService.fulfilled, (state, action) => {
+        state.services = state.services.filter(
+          (service) => service.id !== +action.payload
+        );
+      })
+      .addCase(removeService.rejected, (state, action) => {
+        state.error = action.error.message;
+      })
+      .addCase(updateService.fulfilled, (state, action) => {
+        state.services = state.services.map((service) =>
+          service.id === action.payload.id
+            ? {
+                ...service,
+                service_name: action.payload.service_name,
+                price: action.payload.price,
+                service_description: action.payload.service_description,
+                service_image: action.payload.service_image,
+              }
+            : service
+        );
+      })
+      .addCase(addNewService.fulfilled, (state, action) => {
+        state.services = [...state.services, action.payload];
+      })
+      .addCase(addNewService.rejected, (state, action) => {
         state.error = action.error.message;
       });
   },

@@ -12,6 +12,7 @@ import { getServiceOrders } from '../components/SerchOrder/SerchOrderSlice';
 import UpdateFormOrderItem from '../components/SerchOrder/UpdateFormOrderItem';
 
 import NotFound from '../components/404/NotFound';
+import UpdateFormServiceForAdmin from '../components/servicesForAdmin/UpdateFormServiceForAdmin';
 
 // import ServiceList from '../components/services/ServiceList';
 // import ProductList from '../components/productCart/ProductList';
@@ -37,6 +38,10 @@ function App(): JSX.Element {
           <Route
             path="/serviceorders/edit/:id"
             element={<UpdateFormOrderItem />}
+          />
+          <Route
+            path="/service/edit/:id"
+            element={<UpdateFormServiceForAdmin />}
           />
           <Route index element={<MainPage />} />
           <Route path="/admin" element={<Login />} />
