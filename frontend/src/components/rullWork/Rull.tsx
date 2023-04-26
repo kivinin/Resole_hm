@@ -8,7 +8,7 @@ function Rull(): JSX.Element {
       </div>
       <div className="stepper-wrapper">
         <div className="stepper-item completed">
-          <div className="step-counter" style={{fontSize:"40px", color:"#b1fbe2"}}>1</div>
+          <div className="step-counter" style={{fontSize:"40px"}}>1</div>
           <img src="client.svg" className="imgStep" />
           <div className="step-name" style={{ fontSize: '30px', color:"#b1fbe2", fontWeight:"900" }}>
             Забираем
@@ -19,7 +19,7 @@ function Rull(): JSX.Element {
           </div>
         </div>
         <div className="stepper-item completed" style={{display:"flex"}}>
-          <div className="step-counter">2</div>
+          <div className="step-counter" style={{fontSize:"40px"}}>2</div>
           <img src="brush.svg" className="imgStep" />
           <div className="step-name" style={{ fontSize: '30px', color:"#b1fbe2", fontWeight:"900" }}>
           Восстанавливаем
@@ -29,7 +29,7 @@ function Rull(): JSX.Element {
           </div>
         </div>
         <div className="stepper-item">
-          <div className="step-counter">3</div>
+          <div className="step-counter" style={{fontSize:"40px"}}>3</div>
           <img src="delevery.svg" className="imgStep" />
           <div className="step-name" style={{ fontSize: '30px', color:"#b1fbe2", fontWeight:"900" }}>
           Привозим
@@ -39,7 +39,7 @@ function Rull(): JSX.Element {
           </div>
         </div>
         <div className="stepper-item">
-          <div className="step-counter">4</div>
+          <div className="step-counter" style={{fontSize:"40px"}}>4</div>
           <img src="application.svg" className="imgStep" />
           <div className="step-name" style={{ fontSize: '30px', color:"#b1fbe2", fontWeight:"900" }}>
           Гарантия
