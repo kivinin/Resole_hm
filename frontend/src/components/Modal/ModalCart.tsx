@@ -21,7 +21,7 @@ function ModalCart({ clickModal }: { clickModal: () => void }): JSX.Element {
   console.log(carts);
 
   return (
-    <div className="card">
+    <div className="cardM">
       <div className="closeModal">
         <button onClick={clickModal} className="buttonCloseModal">
           <img src="close.svg"/>
