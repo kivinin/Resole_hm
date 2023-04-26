@@ -14,7 +14,7 @@ import React, { useEffect, useState, Fragment } from 'react';
 import { Container, ProgressBar, ScrollContent, Heading } from './Styles';
 import NotFound from '../components/404/NotFound';
 import UpdateFormServiceForAdmin from '../components/servicesForAdmin/UpdateFormServiceForAdmin';
-
+import UpdateFormProductForAdmin from '../components/productsForAdmin/UpdateFormProductForAdmin';
 
 // import ServiceList from '../components/services/ServiceList';
 // import ProductList from '../components/productCart/ProductList';
@@ -46,10 +46,7 @@ function App(): JSX.Element {
   window.addEventListener('scroll', onScroll);
   return (
     <div className="App">
-   
-      
       <Routes>
-
         <Route path="/" element={<Navbar />}>
           <Route
             path="/serviceorders/edit/:id"
@@ -59,14 +56,16 @@ function App(): JSX.Element {
             path="/service/edit/:id"
             element={<UpdateFormServiceForAdmin />}
           />
+          <Route
+            path="/product/edit/:id"
+            element={<UpdateFormProductForAdmin />}
+          />
           <Route index element={<MainPage />} />
           <Route path="/admin" element={<Login />} />
           <Route path="/list" element={<SerchOrderList />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
-  
-    
     </div>
   );
 }

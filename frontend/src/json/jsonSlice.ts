@@ -54,6 +54,32 @@ export const addNewService = createAsyncThunk(
   }) => api.addNewService(newService)
 );
 
+export const removeProduct = createAsyncThunk(
+  'removeProduct',
+  (productId: number) => api.removeProduct(productId)
+);
+
+export const updateProduct = createAsyncThunk(
+  'updateProduct',
+  (updatedProduct: {
+    id: number;
+    product_name: string;
+    product_price: string;
+    product_description: string;
+    product_image: string;
+  }) => api.updateProduct(updatedProduct)
+);
+
+export const addNewProducts = createAsyncThunk(
+  'addNewService222',
+  (newProduct: {
+    product_name: string;
+    product_price: string;
+    product_description: string;
+    product_image: string;
+  }) => api.addNewProduct(newProduct)
+);
+
 const jsonSlice = createSlice({
   name: 'json',
   initialState,
@@ -119,6 +145,33 @@ const jsonSlice = createSlice({
         state.services = [...state.services, action.payload];
       })
       .addCase(addNewService.rejected, (state, action) => {
+        state.error = action.error.message;
+      })
+      .addCase(removeProduct.fulfilled, (state, action) => {
+        state.products = state.products.filter(
+          (product) => product.id !== +action.payload
+        );
+      })
+      .addCase(removeProduct.rejected, (state, action) => {
+        state.error = action.error.message;
+      })
+      .addCase(updateProduct.fulfilled, (state, action) => {
+        state.products = state.products.map((product) =>
+          product.id === action.payload.id
+            ? {
+                ...product,
+                product_name: action.payload.product_name,
+                product_price: action.payload.product_price,
+                product_description: action.payload.product_description,
+                product_image: action.payload.product_image,
+              }
+            : product
+        );
+      })
+      .addCase(addNewProducts.fulfilled, (state, action) => {
+        state.products = [...state.products, action.payload];
+      })
+      .addCase(addNewProducts.rejected, (state, action) => {
         state.error = action.error.message;
       });
   },
