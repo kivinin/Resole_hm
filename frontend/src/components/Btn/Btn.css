@@ -1,0 +1,18 @@
+.topbutton {
+	width:25px;
+	height: 25px;
+	background:#40efe6;
+	text-align:center;
+	position:fixed;
+	bottom:30px;
+	left:30px;
+	opacity: .6;
+	cursor:pointer;
+	color:#0a0a0a;
+	font-family:verdana;
+	font-size:20px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+}

@@ -45,7 +45,7 @@ module.exports = {
         service_name: "Отбеливание подошвы (рантов)",
         price: "600",
         service_description:
-          "Отбеливание подошвы при помощи ультрафиолета или при помощи перекраски (зависит от материала подошвы)",
+          "Отбеливание подошвы при помощи новейших средств",
         service_image:
           "https://sun9-23.userapi.com/qu_7K8s3s-lqM5rP6DZPnI7MjeCvVyXtAlT9Iw/3F8RxoDnwvw.jpg",
       },

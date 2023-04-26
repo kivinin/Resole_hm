@@ -48,8 +48,6 @@ const SerchOrderSlicer = createSlice({
         state.error = action.error.message;
       })
       .addCase(updateServiceOrder.fulfilled, (state, action) => {
-        console.log(action.payload);
-
         state.service_orders = state.service_orders.map((service_order) =>
           service_order.id === action.payload.id
             ? {

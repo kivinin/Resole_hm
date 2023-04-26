@@ -12,7 +12,7 @@
   height: 400px;
 }
 
-.card {
+.cardM {
   display: grid;
   position: absolute;
   border-radius:0;

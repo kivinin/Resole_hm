@@ -15,10 +15,8 @@ const store = configureStore({
   reducer: {
     jsons: jsonSlice,
     service: jsonSlice,
-
     products: jsonSlice,
     carts: jsonSlice,
-
     auth: authSlice,
     service_orders: SerchOrderSlice,
   },
