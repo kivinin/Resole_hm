@@ -30,13 +30,16 @@
   height: auto;
   top: 200%;
   left: 30%;
+  overflow: 1;
   flex-direction: row;
+  border: 1px solid black
 }
+
 .ModalCartItem {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-}
+
 .closeModal {
   display: flex;
   border-right: 30px solid white;

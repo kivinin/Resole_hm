@@ -8,7 +8,7 @@
 
     "start": "NODE_ENV=production node app.js",
  
-    "dbr": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all"
+    "dbr": "npx sequelize db:migrate && npx sequelize db:seed:all"
   },
   "keywords": [],
   "author": "",

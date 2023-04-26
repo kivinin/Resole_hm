@@ -9,12 +9,14 @@ import Swiper22 from '../Swiper/Swiper22';
 import Rull from '../rullWork/Rull';
 import FeedBack from '../feedBack/FeedBack';
 import MapYandex from '../map/Map';
+import TextComp from '../Text/TextComp';
 // import ModalOrder from '../Modal/ModalOrder';
 
 function MainPage(): JSX.Element {
   return (
     <div>
       <Video />
+      <TextComp/>
       <SliderPhoto />
       <ModalSearchOrder />
       <ServiceList />

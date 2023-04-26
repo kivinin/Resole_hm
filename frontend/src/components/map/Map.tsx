@@ -30,6 +30,7 @@ function MapYandex(): JSX.Element {
           договоренности.
         </div>
       </div>
+
       <div style={{ width: '50%', backgroundColor: 'black' }}>
         <YMaps>
           <Map
@@ -44,6 +45,7 @@ function MapYandex(): JSX.Element {
             <Placemark defaultGeometry={[60.998665, 69.062532]} />
           </Map>
         </YMaps>
+
       </div>
     </div>
   );

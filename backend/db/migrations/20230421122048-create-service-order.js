@@ -1,8 +1,8 @@
-"use strict";
+'use strict';
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("Service_orders", {
+    await queryInterface.createTable('Service_orders', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -13,17 +13,21 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {
-          model: "Clients",
-          key: "id",
+          model: 'Clients',
+          key: 'id',
         },
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
       },
       service_id: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {
-          model: "Services",
-          key: "id",
+          model: 'Services',
+          key: 'id',
         },
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
       },
       status: {
         allowNull: false,
@@ -53,6 +57,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("Service_orders");
+    await queryInterface.dropTable('Service_orders');
   },
 };
