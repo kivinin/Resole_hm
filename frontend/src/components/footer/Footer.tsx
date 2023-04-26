@@ -58,7 +58,7 @@ function Footer(): JSX.Element {
             >
               <div>+7 982 410 8293</div>
               <div>RESOLE@YANDEX.RU</div>
-              <div>ЕЖЕДНЕВНО 12:00 - 20:00</div>
+              <div>ЕЖЕДНЕВНО 12:00 - 20:00 </div>
             </div>
             <div
               style={{
