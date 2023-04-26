@@ -68,7 +68,7 @@ function Footer(): JSX.Element {
                 justifyContent: 'space-around',
               }}
             >
-              <div>МЕНЮ</div>
+              <div>МЕНЮ </div>
               <div>УСЛУГИ</div>
               <div>ДО/ПОСЛЕ</div>
             </div>
