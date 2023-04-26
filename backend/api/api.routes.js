@@ -27,19 +27,19 @@ router
     }
   })
 
-  .post("/order", async (req, res) => {
+  .post('/order', async (req, res) => {
     try {
       const { name, number, carts } = req.body;
       //      console.log(name, number, carts);
-      const adress = "";
+      const adress = '';
       const checkNumber = await Client.findAll({ where: { number: number } });
 
       if (checkNumber.length === 0) {
         const clients = await Client.create({ name, number, adress });
       } else {
-        console.log("pusto");
+        console.log('pusto');
       }
-      
+
       const clientsFind = await Client.findAll({ where: { number: number } });
       const order = await Order.create({
         client_id: clientsFind[0].id,
@@ -132,19 +132,6 @@ router.get('/serviceorders', async (req, res) => {
   }
 });
 
-// router.get('/serviceorders/:uniqkey', async (req, res) => {
-//   try {
-//     const { uniqkey } = req.params;
-//     const serviceorder = await Service_order.findOne({
-//       where: { unique_key: uniqkey },
-//       include: { model: Client },
-//     });
-//     res.json(serviceorder);
-//   } catch ({ message }) {
-//     res.json(message);
-//   }
-// });
-
 router.delete('/serviceorders/:serviceorderId', async (req, res) => {
   try {
     const serviceorder = await Service_order.destroy({
@@ -152,6 +139,19 @@ router.delete('/serviceorders/:serviceorderId', async (req, res) => {
     });
     if (serviceorder > 0) {
       res.json(req.params.serviceorderId);
+    }
+  } catch (error) {
+    res.send(console.log(error.message));
+  }
+});
+
+router.delete('/service/:serviceId', async (req, res) => {
+  try {
+    const service = await Service.destroy({
+      where: { id: req.params.serviceId },
+    });
+    if (service > 0) {
+      res.json(req.params.serviceId);
     }
   } catch (error) {
     res.send(console.log(error.message));
@@ -180,6 +180,43 @@ router.put('/serviceorders/edit/:serviceorderId', async (req, res) => {
     }
   } catch (error) {
     res.send(console.log(error.message));
+  }
+});
+
+router.put('/service/edit/:serviceId', async (req, res) => {
+  try {
+    const { serviceId } = req.params;
+    const { service_name, price, service_description, service_image } =
+      req.body;
+
+    const serviceDB = await Service.findOne({
+      where: { id: serviceId },
+    });
+    serviceDB.service_name = service_name;
+    serviceDB.price = price;
+    serviceDB.service_description = service_description;
+    serviceDB.service_image = service_image;
+    serviceDB.save();
+    res.json(serviceDB);
+  } catch (error) {
+    res.send(console.log(error.message));
+  }
+});
+
+router.post('/service', async (req, res) => {
+  try {
+    const { service_name, service_description, service_image, price } =
+      req.body;
+    const newService = await Service.create({
+      service_name,
+      service_description,
+      service_image,
+      price,
+    });
+
+    res.json(newService);
+  } catch ({ message }) {
+    res.json(message);
   }
 });
 

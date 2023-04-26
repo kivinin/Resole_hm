@@ -16,10 +16,11 @@ function Navbar(): JSX.Element {
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary navBarScroll">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Navbar
-          </a>
+        <div className="container-fluid blockNavbar" >
+          <div style={{position:"absolute", color:"#b1fbe2", fontSize:"9rem" , left:"47%", bottom:"-55%", letterSpacing:"40px"}}>resole</div>
+        <div >
+            <img style={{width:"70px", height:"70px", borderRadius:"50%"}} src='logo.jpg'/>
+          </div>
           <button
             className="navbar-toggler"
             type="button"
@@ -32,43 +33,60 @@ function Navbar(): JSX.Element {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
-              </a>
-              <a className="nav-link" href="#">
-                Features
-              </a>
-              <a className="nav-link" href="#">
-                Pricing
-              </a>
-              <a className="nav-link disabled"> </a>
-            </div>
             {!modal ? (
-              <button type="button" onClick={clickModal}>
-                <img
-                  style={{ width: '40px', height: '40px' }}
-                  src="https://img.freepik.com/premium-vector/shopping-cart-icon-in-black-basket-vector-on-isolated-white-background-eps-10_399089-2824.jpg"
-                  alt=" "
-                />
+              <button
+                type="button"
+                onClick={clickModal}
+                style={{ border: 'none', margin:"0 20px 0 0"}}
+                className="nav-link active zPov"
+              >
+                КОРЗИНА
               </button>
             ) : (
               <>
-                <button type="button" onClick={clickModal}>
-                  <img
-                    style={{ width: '40px', height: '40px' }}
-                    src="https://img.freepik.com/premium-vector/shopping-cart-icon-in-black-basket-vector-on-isolated-white-background-eps-10_399089-2824.jpg"
-                    alt=""
-                  />
+                <button
+                  type="button"
+                  onClick={clickModal}
+                  style={{ border: 'none', margin:"0 20px 0 0"}}
+                  className="nav-link active zPov"
+                >
+                  КОРЗИНА
                 </button>
-                <ModalCart clickModal={clickModal}/>
+                <ModalCart clickModal={clickModal} />
               </>
             )}
-            <button type="button" onClick={() => dispatch(logoutUser())}>
+            <div className="navbar-nav">
+              <a className="nav-link active zPov" aria-current="page" href="#">
+                ВЫЗВАТЬ КУРЬЕРА
+              </a>
+              <a className="nav-link disabled"> </a>
+            </div>
+            {/* <div className="navbar-nav">
+              <a className="nav-link active zPov" aria-current="page" href="#">
+                ДО/ПОСЛЕ
+              </a>
+              <a className="nav-link disabled"> </a>
+            </div> */}
+            <div className="navbar-nav">
+              <a className="nav-link active zPov" aria-current="page" href="#">
+                КОНТАКТЫ
+              </a>
+              <a className="nav-link disabled"> </a>
+            </div>
+            <div className="navbar-nav">
+              <a className="nav-link active zPov" aria-current="page" href="#">
+                ПРОВЕРИТЬ ЗАКАЗ
+              </a>
+              <a className="nav-link disabled"> </a>
+            </div>
+            {/* <button type="button" className="nav-link active" onClick={() => dispatch(logoutUser())} style={{ border: 'none' }}>
               Выйти
-            </button>
-            {carts.length}
+            </button> */}
           </div>
+        </div>
+        <div className='blockInfo'>
+          <div style={{width:"200px"}}>+7 982 410 8293</div>
+          <div style={{width:"200px", fontSize:"13px"}}>12.00 - 20.00 по будням</div>
         </div>
       </nav>
       <Outlet />

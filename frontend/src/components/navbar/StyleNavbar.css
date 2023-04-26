@@ -3,4 +3,26 @@
   position: sticky;
   z-index: 99999;
   top: 0;
+  display: flex;
+  background-color: black !important;
+  opacity: 0.9;
+}
+.blockInfo {
+  display: flex;
+  flex-direction: column;
+  z-index: 99999;
+  font-size: 20px;
+  width: 400px;
+  margin: 0 0 0 140px;
+  align-items: flex-end;
+  color: white;
+}
+.zPov {
+  z-index: 99999;
+  color: white !important;
+}
+
+#navbarNavAltMarkup {
+  display: flex;
+  margin: 0 0 0 10px;
 }
