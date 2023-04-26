@@ -18,12 +18,11 @@ function ModalCart({ clickModal }: { clickModal: () => void }): JSX.Element {
     setName('');
     setNumber('');
   };
-  console.log(carts);
 
   return (
-    <div className="card">
+    <div className="cardM">
       <div className="closeModal">
-        <button onClick={clickModal} className="buttonCloseModal">
+        <button type="button" onClick={clickModal} className="buttonCloseModal">
           X
         </button>
       </div>
@@ -34,32 +33,32 @@ function ModalCart({ clickModal }: { clickModal: () => void }): JSX.Element {
       ))}
 
       <form onSubmit={onHandleSubmit} className="row g-3">
-        <div className='formBuy'>
-        <div className="col-auto">
-          <label className="visually-hidden">name</label>
-          <input
-            onChange={(e) => setName(e.target.value)}
-            value={name}
-            className="form-control"
-            placeholder="name"
-            required
-          />
-        </div>
-        <div className="col-auto">
-          <label className="visually-hidden">number</label>
-          <input
-            className="form-control"
-            placeholder="number"
-            onChange={(e) => setNumber(e.target.value)}
-            value={number}
-            required
-          />
-        </div>
-        <div className="col-auto">
-          <button type="submit" className="btn btn-primary mb-3">
-            Купить
-          </button>
-        </div>
+        <div className="formBuy">
+          <div className="col-auto">
+            <label className="visually-hidden">name</label>
+            <input
+              onChange={(e) => setName(e.target.value)}
+              value={name}
+              className="form-control"
+              placeholder="name"
+              required
+            />
+          </div>
+          <div className="col-auto">
+            <label className="visually-hidden">number</label>
+            <input
+              className="form-control"
+              placeholder="number"
+              onChange={(e) => setNumber(e.target.value)}
+              value={number}
+              required
+            />
+          </div>
+          <div className="col-auto">
+            <button type="submit" className="btn btn-primary mb-3">
+              Купить
+            </button>
+          </div>
         </div>
       </form>
     </div>

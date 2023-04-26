@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import styles from './styles/services.module.scss';
+// import styles from './styles/services.module.scss';
 import ModalOrder from '../Modal/ModalOrder';
+import './styles/style.css';
 
 function ServiceItem({
   service,
@@ -21,38 +22,52 @@ function ServiceItem({
     // eslint-disable-next-line react/jsx-no-useless-fragment
     <>
       {!zayavka ? (
-        <div className={styles.service__item} style={{ width: '21rem' }}>
+        <article className="card">
           <img
+            className="card__background"
             src={`${service.service_image}`}
-            className="card-img-top"
-            alt="..."
+            alt="Pho"
+            width="1920"
+            height="2193"
           />
-          <div className="card-body">
-            <h5 className="card-title">{service.service_name}</h5>
-            <h3>{service.price}</h3>
-            <p className="card-text">{service.service_description}</p>
-          </div>
-          <button type="button" onClick={clickModal}>
-            Отправить заявку
-          </button>
-        </div>
-      ) : (
-        <>
-          <div className={styles.service__item} style={{ width: '21rem' }}>
-            <img
-              src={`${service.service_image}`}
-              className="card-img-top"
-              alt="..."
-            />
-            <div className="card-body">
-              <h5 className="card-title">{service.service_name}</h5>
-              <h3>{service.price}</h3>
-              <p className="card-text">{service.service_description}</p>
+          <div className="card__content | flow">
+            <div className="card__content--container | flow">
+              <h2 className="card__title">{service.service_name}</h2>
+              <p className="card__description">{service.service_description}</p>
+              <p className="card__description">{service.price}</p>
             </div>
-            <button type="button" onClick={clickModal}>
-              Отправить заявку
+            <button type="button" className="card__button" onClick={clickModal}>
+              Заказать услугу
             </button>
           </div>
+        </article>
+      ) : (
+        <>
+          <article className="card">
+            <img
+              className="card__background"
+              src={`${service.service_image}`}
+              alt="Pho"
+              width="1920"
+              height="2193"
+            />
+            <div className="card__content | flow">
+              <div className="card__content--container | flow">
+                <h2 className="card__title">{service.service_name}</h2>
+                <p className="card__description">
+                  {service.service_description}
+                </p>
+                <p className="card__description">{service.price}</p>
+              </div>
+              <button
+                type="button"
+                className="card__button"
+                onClick={clickModal}
+              >
+                Заказать услугу
+              </button>
+            </div>
+          </article>
           <ModalOrder clickModal={clickModal} />
         </>
       )}
