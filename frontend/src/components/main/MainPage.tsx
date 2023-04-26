@@ -8,7 +8,7 @@ import ModalSearchOrder from '../ModalSearchOrder/ModalSearchOrder';
 import Swiper22 from '../Swiper/Swiper22';
 import Rull from '../rullWork/Rull';
 import FeedBack from '../feedBack/FeedBack';
-
+import MapYandex from '../map/Map';
 // import ModalOrder from '../Modal/ModalOrder';
 
 function MainPage(): JSX.Element {
@@ -21,7 +21,8 @@ function MainPage(): JSX.Element {
       <ProductList />
       <Swiper22 />
       <Rull />
-      <FeedBack/>
+      <MapYandex />
+      <FeedBack />
       <Footer />
     </div>
   );

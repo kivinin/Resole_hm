@@ -36,7 +36,7 @@ function Footer(): JSX.Element {
 
         <div style={{ display: 'flex', alignItems:"center"}}>
           <div>
-            <img src="logo.jpg" style={{ width: '200px', height: '200px' }} />
+            <img src="logo.jpg" style={{ width: '150px', height: '150px', borderRadius:"50%"}} />
           </div>
           <div
             style={{
