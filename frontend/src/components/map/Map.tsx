@@ -23,7 +23,7 @@ function MapYandex(): JSX.Element {
           zoom: 15,
           controls: ['zoomControl', 'fullscreenControl'],
       
-        }} style={{width:"800px", height:"400px"}}
+        }} style={{width:"1200px", height:"400px"}}
         modules={['control.ZoomControl', 'control.FullscreenControl']}
       >
         <Placemark defaultGeometry={[60.998665, 69.062532]} />
