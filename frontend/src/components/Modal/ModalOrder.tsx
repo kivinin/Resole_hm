@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import PhoneInput from 'react-phone-number-input/input';
 import { useAppDispatch } from '../../store';
 import { postClient } from '../../json/jsonSlice';
 
@@ -21,7 +20,19 @@ function ModalOrder({ clickModal }: { clickModal: () => void }): JSX.Element {
 
   return (
     <div className="modalka">
-      <form onSubmit={onHandleSubmit} className="row g-3">
+      <form onSubmit={onHandleSubmit}>
+        <h1 style={{ fontSize: '30px', marginBottom: '30px' }}>Отправить заявку</h1>
+        <ul className="ulka">
+          <li>Приедем в удобное время и место</li>
+          <li>Оставим квитанции с подробным описанием</li>
+          <li>
+            После осмотра изделий технологом свяжемся с вами для согласования
+            итоговой стоимости работ
+          </li>
+          <li>Начнём работу только после вашего согласия</li>
+          <li>Отправим фото результата</li>
+          <li>Доставим готовые изделия обратно</li>
+        </ul>
         <div className="col-auto">
           <label className="visually-hidden">name</label>
           <input
@@ -57,11 +68,15 @@ function ModalOrder({ clickModal }: { clickModal: () => void }): JSX.Element {
           />
         </div>
         <div className="col-auto">
-          <button type="submit" className="btn btn-primary mb-3">
+          <button type="submit" className="btn btn-outline-secondary">
             Confirm identity
           </button>
         </div>
-        <button type="button" onClick={clickModal}>
+        <button
+          className="btn btn-outline-danger"
+          type="button"
+          onClick={clickModal}
+        >
           close
         </button>
       </form>
