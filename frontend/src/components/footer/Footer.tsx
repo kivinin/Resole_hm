@@ -57,8 +57,8 @@ function Footer(): JSX.Element {
               }}
             >
               <div>+7 982 410 8293</div>
-              <div>nfo@penamsk.ru</div>
-              <div>ЕЖЕДНЕВНО 10:00 - 21:00</div>
+              <div>RESOLE@YANDEX.RU</div>
+              <div>ЕЖЕДНЕВНО 12:00 - 20:00</div>
             </div>
             <div
               style={{
@@ -69,7 +69,7 @@ function Footer(): JSX.Element {
               }}
             >
               <div>МЕНЮ</div>
-              <div>УСЛГУИ</div>
+              <div>УСЛУГИ</div>
               <div>ДО/ПОСЛЕ</div>
             </div>
             <div

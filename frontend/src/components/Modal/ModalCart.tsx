@@ -24,7 +24,7 @@ function ModalCart({ clickModal }: { clickModal: () => void }): JSX.Element {
     <div className="card">
       <div className="closeModal">
         <button onClick={clickModal} className="buttonCloseModal">
-          X
+          <img src="close.svg"/>
         </button>
       </div>
       <h2 className="card-title cartSize">Корзина</h2>
@@ -33,34 +33,35 @@ function ModalCart({ clickModal }: { clickModal: () => void }): JSX.Element {
         <ModalCartItem key={product.id} product={product} />
       ))}
 
-      <form onSubmit={onHandleSubmit} className="row g-3">
+      <form onSubmit={onHandleSubmit} className="row g-3" style={{margin:"50px 0 0 0"}}>
         <div className='formBuy'>
         <div className="col-auto">
-          <label className="visually-hidden">name</label>
+          <label className="visually-hidden">Имя</label>
           <input
             onChange={(e) => setName(e.target.value)}
             value={name}
             className="form-control"
-            placeholder="name"
+            placeholder="Имя"
             required
           />
         </div>
         <div className="col-auto">
-          <label className="visually-hidden">number</label>
+          <label className="visually-hidden">Номер телефона</label>
           <input
             className="form-control"
-            placeholder="number"
+            placeholder="+7(999)-999-99-99"
             onChange={(e) => setNumber(e.target.value)}
             value={number}
             required
           />
         </div>
         <div className="col-auto">
-          <button type="submit" className="btn btn-primary mb-3">
-            Купить
+          <button type="submit" className="btn btn-dark mb-3 butHover">
+          Сделать заказ
           </button>
         </div>
         </div>
+        <div style={{margin:"0 0 0 100px", width:"400px", fontSize:"10px", fontWeight:"700"}}>Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных</div>
       </form>
     </div>
   );

@@ -17,7 +17,7 @@ function Navbar(): JSX.Element {
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary navBarScroll">
         <div className="container-fluid blockNavbar" >
-          <div style={{position:"absolute", color:"#b1fbe2", fontSize:"8rem" , left:"47%", bottom:"-49%", letterSpacing:"40px"}}>resole</div>
+          <div style={{position:"absolute", color:"#b1fbe2", fontSize:"8rem" , left:"47%", bottom:"-49%", letterSpacing:"40px", opacity:"0.7"}}>Resole</div>
         <div >
             <img style={{width:"70px", height:"70px", borderRadius:"50%"}} src='logo.jpg'/>
           </div>

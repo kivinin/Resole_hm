@@ -2,7 +2,7 @@
 .modalka {
   z-index: 999999;
   position: fixed;
-  left: 50%;
+  left: 40%;
   top: 50%;
   background-color: beige;
   display: flex;
@@ -18,13 +18,14 @@
   border-radius:0;
   width: 600px;
   height: auto;
-  top: 150%;
-  left: 40%;
+  top: 200%;
+  left: 30%;
   flex-direction: row;
 }
 .ModalCartItem{
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
 }
 .closeModal{
     display: flex;
@@ -33,7 +34,8 @@
     padding: 12px 2px;
 }
 .buttonCloseModal{
-    border-radius:50%;
+  border:none;
+  background-color: white;
     width:30px;
     height: 30px;
 }
@@ -56,3 +58,8 @@
     display: flex;
     justify-content: space-evenly;
   }
+.butHover:hover{
+ background-color: #b1fbe2 !important;
+ color: black;
+ border: none
+}
