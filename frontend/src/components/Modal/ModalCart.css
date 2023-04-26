@@ -1,65 +1,75 @@
-
 .modalka {
   z-index: 999999;
   position: fixed;
   left: 40%;
-  top: 50%;
-  background-color: beige;
+  top: 35%;
+  background-color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 300px;
-  height: 400px;
+  width: 600px;
+  height: 600px;
+  outline: 2px solid #000;
 }
-
+.form-control {
+  margin: 10px;
+  width: 560px;
+}
+.col-auto {
+  margin: 10px;
+}
+.ulka {
+  font-weight: 300;
+  text-align: start;
+}
 .cardM {
   display: grid;
   position: absolute;
-  border-radius:0;
+  border-radius: 0;
   width: 600px;
   height: auto;
   top: 200%;
   left: 30%;
   flex-direction: row;
 }
-.ModalCartItem{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
+.ModalCartItem {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
-.closeModal{
-    display: flex;
-    border-right: 30px solid white;
-    border-left: 30px solid white;
-    padding: 12px 2px;
+.closeModal {
+  display: flex;
+  border-right: 30px solid white;
+  border-left: 30px solid white;
+  padding: 12px 2px;
 }
-.buttonCloseModal{
-  border:none;
+.buttonCloseModal {
+  border: none;
   background-color: white;
-    width:30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
-.cartSize{
-    font-size: 35px;
+.cartSize {
+  font-size: 35px;
 }
 .thClass {
-    font-weight: normal;
-    border-bottom: 2px solid #6678b1;
-    border-right: 30px solid white;
-    border-left: 30px solid white;
-    padding: 8px 2px;
-  }
-  td {
-    border-right: 30px solid white;
-    border-left: 30px solid white;
-    padding: 12px 2px;
-  }
-  .formBuy{
-    display: flex;
-    justify-content: space-evenly;
-  }
-.butHover:hover{
- background-color: #b1fbe2 !important;
- color: black;
- border: none
+  font-weight: normal;
+  border-bottom: 2px solid #6678b1;
+  border-right: 30px solid white;
+  border-left: 30px solid white;
+  padding: 8px 2px;
+}
+td {
+  border-right: 30px solid white;
+  border-left: 30px solid white;
+  padding: 12px 2px;
+}
+.formBuy {
+  display: flex;
+  justify-content: space-evenly;
+}
+.butHover:hover {
+  background-color: #b1fbe2 !important;
+  color: black;
+  border: none;
 }

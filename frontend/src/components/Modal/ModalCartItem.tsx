@@ -1,19 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Product } from '../../json/types/Product';
 import './ModalCart.css';
 
 function ModalCartItem({ product }: { product: Product }): JSX.Element {
-  //   const [quantity, setQuantity] = useState(1);
-
-  //   const dispatch = useAppDispatch();
-  //   dispatch(postOrder({ name, number, carts }));
-
-  //   const onClickQuantity = (): void => {
-  //     setQuantity((pre) => pre + 1);
-  //   };
   return (
     <div className="ModalCartItem">
-      <div style={{display:"flex", flexDirection:"column"}}>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
         <table className="table">
           <thead>
             <tr>
@@ -35,10 +27,7 @@ function ModalCartItem({ product }: { product: Product }): JSX.Element {
           </thead>
         </table>
       </div>
-      <div style={{ borderBottom: '1px solid black', width: '600px' }}></div>
-      {/* <button type="button" onClick={onClickQuantity}>
-        +
-      </button> */}
+      <div style={{ borderBottom: '1px solid black', width: '600px' }} />
     </div>
   );
 }
