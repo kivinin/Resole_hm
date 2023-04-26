@@ -19,7 +19,7 @@
   .stepper-item::before {
     position: absolute;
     content: "";
-    border-bottom: 2px solid #cc1414;
+    border-bottom: 2px solid hwb(286 33% 22%);
     width: 100%;
     top: 40px;
     left: -50%;
@@ -47,7 +47,7 @@
     border-radius: 50%;
     background-color: #ffffff;
     border: 6px solid ;
-    border-color: rgb(185, 185, 254);
+    border-color: rgb(0, 0, 0);
     margin-bottom: 6px;
   }
   
@@ -58,7 +58,7 @@
   .stepper-item.completed .step-counter {
     background-color: #ffffff;
     border: 6px solid ;
-    border-color: rgb(185, 185, 254);
+    border-color: rgb(0, 0, 0);
   }
   
   .stepper-item.completed::after {

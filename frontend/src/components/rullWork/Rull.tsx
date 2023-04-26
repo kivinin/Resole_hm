@@ -3,25 +3,25 @@ import './Rull.css';
 function Rull(): JSX.Element {
   return (
     <div className="borderRull">
-      <div style={{ fontSize: '60px', margin: '100px 0 100px 0' }}>
+      <div style={{ fontSize: '60px', margin: '100px 0 100px 0',fontWeight:"800"}}>
         Как мы работаем
       </div>
       <div className="stepper-wrapper">
         <div className="stepper-item completed">
-          <div className="step-counter">1</div>
+          <div className="step-counter" style={{fontSize:"40px"}}>1</div>
           <img src="client.svg" className="imgStep" />
-          <div className="step-name" style={{ fontSize: '30px' }}>
+          <div className="step-name" style={{ fontSize: '30px', color:"#b1fbe2", fontWeight:"900" }}>
             Забираем
           </div>
-          <div className="step-name" style={{ width: '200px' }}>
+          <div className="step-name" style={{ width: '200px'}}>
             Бесплатная доставка по городу Согласовываем с вами все работы после
             осмотра изделий технологом
           </div>
         </div>
-        <div className="stepper-item completed">
-          <div className="step-counter">2</div>
+        <div className="stepper-item completed" style={{display:"flex"}}>
+          <div className="step-counter" style={{fontSize:"40px"}}>2</div>
           <img src="brush.svg" className="imgStep" />
-          <div className="step-name" style={{ fontSize: '30px' }}>
+          <div className="step-name" style={{ fontSize: '30px', color:"#b1fbe2", fontWeight:"900" }}>
           Восстанавливаем
           </div>
           <div className="step-name" style={{ width: '200px' }}>
@@ -29,9 +29,9 @@ function Rull(): JSX.Element {
           </div>
         </div>
         <div className="stepper-item">
-          <div className="step-counter">3</div>
+          <div className="step-counter" style={{fontSize:"40px"}}>3</div>
           <img src="delevery.svg" className="imgStep" />
-          <div className="step-name" style={{ fontSize: '30px' }}>
+          <div className="step-name" style={{ fontSize: '30px', color:"#b1fbe2", fontWeight:"900" }}>
           Привозим
           </div>
           <div className="step-name" style={{ width: '200px' }}>
@@ -39,9 +39,9 @@ function Rull(): JSX.Element {
           </div>
         </div>
         <div className="stepper-item">
-          <div className="step-counter">4</div>
+          <div className="step-counter" style={{fontSize:"40px"}}>4</div>
           <img src="application.svg" className="imgStep" />
-          <div className="step-name" style={{ fontSize: '30px' }}>
+          <div className="step-name" style={{ fontSize: '30px', color:"#b1fbe2", fontWeight:"900" }}>
           Гарантия
           </div>
           <div className="step-name" style={{ width: '200px' }}>
