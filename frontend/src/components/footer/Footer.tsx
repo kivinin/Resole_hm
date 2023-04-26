@@ -6,7 +6,6 @@ import './footer.css';
 function Footer(): JSX.Element {
   return (
     <MDBFooter bgColor="light" className="text-center text-lg-left footer">
-      <div className="text-center p-3" style={{ backgroundColor: 'black' }}>
         <svg display="none">
           <symbol id="icon_instagram" viewBox="0 0 448 512">
             <path
