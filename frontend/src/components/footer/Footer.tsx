@@ -10,7 +10,6 @@ function Footer(): JSX.Element {
         className="text-center p-3"
         style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}
       >
-          <MapYandex />
           <a href="https://yandex.ru/maps/?rtext=~60.998665,69.062532">
             <button className="btnYandex" type="button">Построить маршрут</button></a>
         <svg display="none">
