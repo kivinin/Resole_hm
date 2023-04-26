@@ -13,6 +13,7 @@ import UpdateFormOrderItem from '../components/SerchOrder/UpdateFormOrderItem';
 import React, { useEffect, useState, Fragment } from 'react';
 import { Container, ProgressBar, ScrollContent, Heading } from './Styles';
 import NotFound from '../components/404/NotFound';
+import UpdateFormServiceForAdmin from '../components/servicesForAdmin/UpdateFormServiceForAdmin';
 
 
 // import ServiceList from '../components/services/ServiceList';
@@ -53,6 +54,10 @@ function App(): JSX.Element {
           <Route
             path="/serviceorders/edit/:id"
             element={<UpdateFormOrderItem />}
+          />
+          <Route
+            path="/service/edit/:id"
+            element={<UpdateFormServiceForAdmin />}
           />
           <Route index element={<MainPage />} />
           <Route path="/admin" element={<Login />} />

@@ -36,6 +36,5 @@ export const updateServiceOrder = async (updatedServiceOrder: {
     },
     body: JSON.stringify(updatedServiceOrder),
   });
-
   return res.json();
 };
