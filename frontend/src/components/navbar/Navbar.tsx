@@ -18,7 +18,7 @@ function Navbar(): JSX.Element {
       <nav className="navbar navbar-expand-lg bg-body-tertiary navBarScroll">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            Navbar
+            Resole
           </a>
           <button
             className="navbar-toggler"
@@ -36,38 +36,35 @@ function Navbar(): JSX.Element {
               <a className="nav-link active" aria-current="page" href="#">
                 Home
               </a>
-              <a className="nav-link" href="#">
-                Features
-              </a>
-              <a className="nav-link" href="#">
-                Pricing
-              </a>
+        
+  
               <a className="nav-link disabled"> </a>
             </div>
             {!modal ? (
-              <button type="button" onClick={clickModal}>
-                <img
-                  style={{ width: '40px', height: '40px' }}
-                  src="https://img.freepik.com/premium-vector/shopping-cart-icon-in-black-basket-vector-on-isolated-white-background-eps-10_399089-2824.jpg"
-                  alt=" "
-                />
+              <button
+                type="button"
+                onClick={clickModal}
+                style={{ border: 'none', margin:"0 20px 0 0"}}
+                className="nav-link active"
+              >
+                корзина
               </button>
             ) : (
               <>
-                <button type="button" onClick={clickModal}>
-                  <img
-                    style={{ width: '40px', height: '40px' }}
-                    src="https://img.freepik.com/premium-vector/shopping-cart-icon-in-black-basket-vector-on-isolated-white-background-eps-10_399089-2824.jpg"
-                    alt=""
-                  />
+                <button
+                  type="button"
+                  onClick={clickModal}
+                  style={{ border: 'none', margin:"0 20px 0 0"}}
+                  className="nav-link active"
+                >
+                  корзина
                 </button>
-                <ModalCart clickModal={clickModal}/>
+                <ModalCart clickModal={clickModal} />
               </>
             )}
-            <button type="button" onClick={() => dispatch(logoutUser())}>
+            <button type="button" className="nav-link active" onClick={() => dispatch(logoutUser())} style={{ border: 'none' }}>
               Выйти
             </button>
-            {carts.length}
           </div>
         </div>
       </nav>

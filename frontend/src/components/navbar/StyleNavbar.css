@@ -1,6 +1,6 @@
 .navBarScroll {
   position: -webkit-sticky;
   position: sticky;
-  z-index: 99999;
+  z-index: 999999999;
   top: 0;
 }

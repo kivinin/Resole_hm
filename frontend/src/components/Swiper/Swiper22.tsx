@@ -12,7 +12,7 @@ import { EffectCoverflow, Pagination, Navigation } from 'swiper';
 function Swiper22(): JSX.Element {
   return (
     <div className="container">
-      <h1 className="heading">Flower Gallery</h1>
+      <h1 className="heading">Примеры наших работ</h1>
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
