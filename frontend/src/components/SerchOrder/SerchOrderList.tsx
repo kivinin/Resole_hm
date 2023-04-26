@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../../store';
 import SerchOrderItem from './SerchOrderItem';
 import ServicesForAdminList from '../servicesForAdmin/ServicesForAdminList';
+import ProductForAdminList from '../productsForAdmin/ProductForAdminList';
 
 function SerchOrderList(): JSX.Element {
   // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -11,6 +12,11 @@ function SerchOrderList(): JSX.Element {
   );
   return (
     <>
+      <br></br>
+      <br></br>
+      <p className="fs-1 fw-bold">ЗАКАЗЫ</p>
+      <br></br>
+      <br></br>
       <table className="table">
         <thead>
           <tr>
@@ -33,7 +39,22 @@ function SerchOrderList(): JSX.Element {
           ))}
         </tbody>
       </table>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <p className="fs-1 fw-bold">СЕРВИСЫ</p>
+      <br></br>
+      <br></br>
       <ServicesForAdminList />
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <p className="fs-1 fw-bold">ПРОДУКТЫ</p>
+      <br></br>
+      <br></br>
+      <ProductForAdminList />
     </>
   );
 }

@@ -220,4 +220,56 @@ router.post('/service', async (req, res) => {
   }
 });
 
+router.delete('/product/:productId', async (req, res) => {
+  console.log('Elfkbk', req.params.productId);
+  try {
+    const product = await Product.destroy({
+      where: { id: req.params.productId },
+    });
+    console.log(product, 'asdsadsadasdasdadas');
+    if (product > 0) {
+      res.json(req.params.productId);
+    }
+  } catch (error) {
+    res.send(console.log(error.message));
+  }
+});
+
+router.put('/product/edit/:productId', async (req, res) => {
+  try {
+    console.log(123);
+    const { productId } = req.params;
+    const { product_name, product_price, product_description, product_image } =
+      req.body;
+    console.log(req.body);
+    const productDB = await Product.findOne({
+      where: { id: productId },
+    });
+    productDB.product_name = product_name;
+    productDB.product_price = product_price;
+    productDB.product_description = product_description;
+    productDB.product_image = product_image;
+    productDB.save();
+    res.json(productDB);
+  } catch (error) {
+    res.send(console.log(error.message));
+  }
+});
+
+router.post('/product', async (req, res) => {
+  try {
+    const { product_name, product_description, product_image, product_price } =
+      req.body;
+    const newProduct = await Product.create({
+      product_name,
+      product_description,
+      product_image,
+      product_price,
+    });
+    res.json(newProduct);
+  } catch ({ message }) {
+    res.json(message);
+  }
+});
+
 module.exports = router;

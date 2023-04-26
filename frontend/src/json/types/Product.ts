@@ -5,3 +5,5 @@ export type Product = {
   product_description: string;
   product_image: string;
 };
+
+export type ProductId = Product['id'];
