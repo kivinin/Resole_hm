@@ -5,6 +5,7 @@ import { Outlet } from 'react-router';
 import { RootState, useAppDispatch } from '../../store';
 import ModalCart from '../Modal/ModalCart';
 import { logoutUser } from '../Auth/authSlice';
+import ModalSearchOrder from '../ModalSearchOrder/ModalSearchOrder';
 
 function Navbar(): JSX.Element {
   const { carts } = useSelector((store: RootState) => store.carts);
@@ -16,10 +17,25 @@ function Navbar(): JSX.Element {
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary navBarScroll">
-        <div className="container-fluid blockNavbar" >
-          <div style={{position:"absolute", color:"#b1fbe2", fontSize:"8rem" , left:"47%", bottom:"-49%", letterSpacing:"40px", opacity:"0.7"}}>Resole</div>
-        <div >
-            <img style={{width:"70px", height:"70px", borderRadius:"50%"}} src='logo.jpg'/>
+        <div className="container-fluid blockNavbar">
+          <div
+            style={{
+              position: 'absolute',
+              color: '#b1fbe2',
+              fontSize: '8rem',
+              left: '47%',
+              bottom: '-49%',
+              letterSpacing: '40px',
+              opacity: '0.7',
+            }}
+          >
+            Resole
+          </div>
+          <div>
+            <img
+              style={{ width: '70px', height: '70px', borderRadius: '50%' }}
+              src="logo.jpg"
+            />
           </div>
           <button
             className="navbar-toggler"
@@ -37,7 +53,7 @@ function Navbar(): JSX.Element {
               <button
                 type="button"
                 onClick={clickModal}
-                style={{ border: 'none', margin:"0 20px 0 0"}}
+                style={{ border: 'none', margin: '0 20px 0 0' }}
                 className="nav-link active zPov"
               >
                 КОРЗИНА
@@ -47,7 +63,7 @@ function Navbar(): JSX.Element {
                 <button
                   type="button"
                   onClick={clickModal}
-                  style={{ border: 'none', margin:"0 20px 0 0"}}
+                  style={{ border: 'none', margin: '0 20px 0 0' }}
                   className="nav-link active zPov"
                 >
                   КОРЗИНА
@@ -74,9 +90,7 @@ function Navbar(): JSX.Element {
               <a className="nav-link disabled"> </a>
             </div>
             <div className="navbar-nav">
-              <a className="nav-link active zPov" aria-current="page" href="#">
-                ПРОВЕРИТЬ ЗАКАЗ
-              </a>
+              <ModalSearchOrder />
               <a className="nav-link disabled"> </a>
             </div>
             {/* <button type="button" className="nav-link active" onClick={() => dispatch(logoutUser())} style={{ border: 'none' }}>
@@ -84,9 +98,11 @@ function Navbar(): JSX.Element {
             </button> */}
           </div>
         </div>
-        <div className='blockInfo'>
-          <div style={{width:"200px"}}>+7 982 410 8293</div>
-          <div style={{width:"200px", fontSize:"13px"}}>12.00 - 20.00 по будням</div>
+        <div className="blockInfo">
+          <div style={{ width: '200px' }}>+7 982 410 8293</div>
+          <div style={{ width: '200px', fontSize: '13px' }}>
+            12.00 - 20.00 по будням
+          </div>
         </div>
       </nav>
       <Outlet />
