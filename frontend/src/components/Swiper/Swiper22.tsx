@@ -33,46 +33,37 @@ function Swiper22(): JSX.Element {
         className="swiper_container"
       >
         <SwiperSlide>
+          <img src="photo10.jpg" alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="photo9.jpg" alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="photo8.jpg" alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="photo7.jpg" alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
           <img
-            src="https://bladenbox.nl/wp-content/uploads/2022/02/playboy-02-2022.jpg"
+            src="https://fedorshmidt.com/images/uploads/gallery/222_5443-as-Smart-Object-xxx.jpg"
             alt="slide_image"
           />
         </SwiperSlide>
         <SwiperSlide>
-          <img
-            src="https://vesti.kz/userdata/gallery/gallery_2115/photo_100048.jpg"
-            alt="slide_image"
-          />
+          <img src="photo5.jpg" alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img
-            src="https://basket-01.wb.ru/vol127/part12771/12771784/images/big/1.jpg"
-            alt="slide_image"
-          />
+          <img src="photo4.jpg" alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img
-            src="https://cv7.litres.ru/pub/c/cover_415/65668977.jpg"
-            alt="slide_image"
-          />
+          <img src="photo3.jpg" alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img
-            src="https://n1s1.hsmedia.ru/8f/eb/69/8feb69eac08ee096cf825dfa0f9d3439/469x600_1_f5dfde7e4c423ffe52df5b33808d4201@846x1083_0xac120003_9420096951648111921.jpg"
-            alt="slide_image"
-          />
+          <img src="photo2.jpg" alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img
-            src="https://ae04.alicdn.com/kf/Sca671758b2684c0ab2a61e62c73ec0d1G.jpg_640x640.jpg"
-            alt="slide_image"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHUgkN51wKq9OsKXwunIQJ7pdrTOC_6tw2H9yyYj46juG6oE7Kew35XCABquIcC1izTeg&usqp=CAU"
-            alt="slide_image"
-          />
+          <img src="photo1.jpg" alt="slide_image" />
         </SwiperSlide>
       </Swiper>
     </div>
