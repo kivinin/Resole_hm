@@ -1,4 +1,4 @@
-const router = require("express").Router();
+const router = require('express').Router();
 const {
   Service,
   Client,
@@ -6,10 +6,10 @@ const {
   Service_order,
   Product,
   Order,
-} = require("../db/models");
+} = require('../db/models');
 
 router
-  .get("/service", async (req, res) => {
+  .get('/service', async (req, res) => {
     try {
       const services = await Service.findAll({ raw: true });
       res.json(services);
@@ -18,7 +18,7 @@ router
     }
   })
 
-  .get("/products", async (req, res) => {
+  .get('/products', async (req, res) => {
     try {
       const products = await Product.findAll({ raw: true });
       res.json(products);
@@ -27,17 +27,17 @@ router
     }
   })
 
-  .post("/order", async (req, res) => {
+  .post('/order', async (req, res) => {
     try {
       const { name, number, carts } = req.body;
       //      console.log(name, number, carts);
-      const adress = "";
+      const adress = '';
       const checkNumber = await Client.findAll({ where: { number: number } });
 
       if (checkNumber.length === 0) {
         const clients = await Client.create({ name, number, adress });
       } else {
-        console.log("pusto");
+        console.log('pusto');
       }
 
       const clientsFind = await Client.findAll({ where: { number: number } });
@@ -64,21 +64,21 @@ router
     }
   })
 
-  .post("/client", async (req, res) => {
+  .post('/client', async (req, res) => {
     try {
       const { name, number, adress } = req.body;
-      console.log("1233456789");
-      const token = "5976899897:AAHNOrGZ_VSY300IfhA_mQY_QWQAv3Moe4k";
-      const idChat = "676975446";
+      console.log('1233456789');
+      const token = '5976899897:AAHNOrGZ_VSY300IfhA_mQY_QWQAv3Moe4k';
+      const idChat = '676975446';
       const uniqKey = Math.random().toString(36).slice(-8);
       const message = [
-        "<b>Name</b>: " + name,
-        "<b>Number</b>: " + number,
-        "<b>Adress</b>: " + adress,
-        "<b>uniqKey</b>: " + uniqKey,
+        '<b>Name</b>: ' + name,
+        '<b>Number</b>: ' + number,
+        '<b>Adress</b>: ' + adress,
+        '<b>uniqKey</b>: ' + uniqKey,
       ];
 
-      let msg = message.join(" ");
+      let msg = message.join(' ');
       msg = encodeURI(msg);
 
       const postBot = await fetch(
@@ -86,7 +86,7 @@ router
       );
       console.log(name, number, adress);
       const clients = await Client.create({ name, number, adress });
-      console.log(uniqKey, "+++++++++");
+      console.log(uniqKey, '+++++++++');
 
       const customers = await Service_order.create({
         client_id: clients.id,
@@ -94,14 +94,14 @@ router
         status: false,
         unique_key: uniqKey,
       });
-      console.log(customers, "-________----");
+      console.log(customers, '-________----');
       res.json(clients, customers, postBot);
     } catch ({ message }) {
       res.json(message);
     }
   })
 
-  .delete("/films/:filmId", async (req, res) => {
+  .delete('/films/:filmId', async (req, res) => {
     try {
       const { filmId } = req.params;
       const result = await Film.destroy({ where: { id: filmId } });
@@ -114,7 +114,7 @@ router
     }
   });
 
-router.get("/users", async (req, res) => {
+router.get('/users', async (req, res) => {
   try {
     const users = await User.findAll({ raw: true });
     res.json(users);
@@ -123,7 +123,7 @@ router.get("/users", async (req, res) => {
   }
 });
 
-router.get("/serviceorders", async (req, res) => {
+router.get('/serviceorders', async (req, res) => {
   try {
     const servicesorders = await Service_order.findAll({
       include: { model: Client },
@@ -135,7 +135,7 @@ router.get("/serviceorders", async (req, res) => {
   }
 });
 
-router.delete("/serviceorders/:serviceorderId", async (req, res) => {
+router.delete('/serviceorders/:serviceorderId', async (req, res) => {
   try {
     const serviceorder = await Service_order.destroy({
       where: { id: req.params.serviceorderId },
@@ -148,7 +148,7 @@ router.delete("/serviceorders/:serviceorderId", async (req, res) => {
   }
 });
 
-router.delete("/service/:serviceId", async (req, res) => {
+router.delete('/service/:serviceId', async (req, res) => {
   try {
     const service = await Service.destroy({
       where: { id: req.params.serviceId },
@@ -161,7 +161,7 @@ router.delete("/service/:serviceId", async (req, res) => {
   }
 });
 
-router.put("/serviceorders/edit/:serviceorderId", async (req, res) => {
+router.put('/serviceorders/edit/:serviceorderId', async (req, res) => {
   try {
     const { serviceorderId } = req.params;
     const { status, before_img, after_img, comments } = req.body;
@@ -179,14 +179,14 @@ router.put("/serviceorders/edit/:serviceorderId", async (req, res) => {
       serviceorderDB.save();
       res.json(serviceorderDB);
     } else {
-      res.status(500).json({ message: "Заполни все поля" });
+      res.status(500).json({ message: 'Заполни все поля' });
     }
   } catch (error) {
     res.send(console.log(error.message));
   }
 });
 
-router.put("/service/edit/:serviceId", async (req, res) => {
+router.put('/service/edit/:serviceId', async (req, res) => {
   try {
     const { serviceId } = req.params;
     const { service_name, price, service_description, service_image } =
@@ -206,7 +206,7 @@ router.put("/service/edit/:serviceId", async (req, res) => {
   }
 });
 
-router.post("/service", async (req, res) => {
+router.post('/service', async (req, res) => {
   try {
     const { service_name, service_description, service_image, price } =
       req.body;
@@ -223,13 +223,13 @@ router.post("/service", async (req, res) => {
   }
 });
 
-router.delete("/product/:productId", async (req, res) => {
-  console.log("Elfkbk", req.params.productId);
+router.delete('/product/:productId', async (req, res) => {
+  console.log('Elfkbk', req.params.productId);
   try {
     const product = await Product.destroy({
       where: { id: req.params.productId },
     });
-    console.log(product, "asdsadsadasdasdadas");
+    console.log(product, 'asdsadsadasdasdadas');
     if (product > 0) {
       res.json(req.params.productId);
     }
@@ -238,7 +238,7 @@ router.delete("/product/:productId", async (req, res) => {
   }
 });
 
-router.put("/product/edit/:productId", async (req, res) => {
+router.put('/product/edit/:productId', async (req, res) => {
   try {
     console.log(123);
     const { productId } = req.params;
@@ -259,7 +259,7 @@ router.put("/product/edit/:productId", async (req, res) => {
   }
 });
 
-router.post("/product", async (req, res) => {
+router.post('/product', async (req, res) => {
   try {
     const { product_name, product_description, product_image, product_price } =
       req.body;
@@ -270,6 +270,25 @@ router.post("/product", async (req, res) => {
       product_price,
     });
     res.json(newProduct);
+  } catch ({ message }) {
+    res.json(message);
+  }
+});
+
+router.get('/order', async (req, res) => {
+  try {
+    const order = await Order.findAll({
+      include: [
+        {
+          model: Cart,
+          include: { model: Product },
+        },
+        {
+          model: Client,
+        },
+      ],
+    });
+    res.json(order);
   } catch ({ message }) {
     res.json(message);
   }
