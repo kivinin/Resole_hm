@@ -56,9 +56,9 @@ function Footer(): JSX.Element {
                 justifyContent: 'space-around',
               }}
             >
-              <div className=''>+7 982 410 8293</div>
-              <div>RESOLE@YANDEX.RU</div>
-              <div>ЕЖЕДНЕВНО 12:00 - 20:00 </div>
+              <div className='textFot'>+7 982 410 8293</div>
+              <div className='textFot'>RESOLE@YANDEX.RU</div>
+              <div className='textFot'> 12:00 - 20:00 </div>
             </div>
             <div
               style={{
@@ -68,9 +68,9 @@ function Footer(): JSX.Element {
                 justifyContent: 'space-around',
               }}
             >
-              <div>МЕНЮ </div>
-              <div>УСЛУГИ</div>
-              <div>ДО/ПОСЛЕ</div>
+              <div className='textFot'>МЕНЮ </div>
+              <div className='textFot'>УСЛУГИ</div>
+              <div className='textFot'>ДО/ПОСЛЕ</div>
             </div>
             <div
               style={{
@@ -80,42 +80,13 @@ function Footer(): JSX.Element {
                 justifyContent: 'space-around',
               }}
             >
-              <div>ЕЩЕ</div>
-              <div >О НАС</div>
-              <div>ВАКАНСИИ</div>
-              <div>ОТЗЫВЫ</div>
+              <div className='textFot'>ЕЩЕ</div>
+              <div className='textFot'>О НАС</div>
+              <div className='textFot'>ВАКАНСИИ</div>
+              <div className='textFot'>ОТЗЫВЫ</div>
             </div>
           </div>
-          <div>
-            <div className="social instagram">
-              <a href="#" target="_blank" title="Это Instagram">
-                <svg>
-                  <use xlinkHref="#icon_instagram"></use>
-                </svg>
-              </a>
-            </div>
-            <div className="social telegram">
-              <a href="#" target="_blank" title="Это Telegram">
-                <svg>
-                  <use xlinkHref="#icon_telegram"></use>
-                </svg>
-              </a>
-            </div>
-            <div className="social vk">
-              <a href="#" target="_blank" title="Это Vk">
-                <svg>
-                  <use xlinkHref="#icon_vk"></use>
-                </svg>
-              </a>
-            </div>
-            <div className="social whatsapp">
-              <a href="#" target="_blank" title="Это Whatsapp">
-                <svg>
-                  <use xlinkHref="#icon_whatsapp"></use>
-                </svg>
-              </a>
-              <div></div>
-            </div>
+          <div style={{margin:"0 0 0 400px "}}>
             <img
               className="tn-atom__img t-img loaded"
               data-original="https://static.tildacdn.com/tild3035-3736-4335-a539-613938626365/HorizontalLogos5.png"
