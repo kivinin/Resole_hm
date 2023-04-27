@@ -14,14 +14,7 @@ const ScrollIndicator = () => {
 
   window.addEventListener('scroll', onScroll);
 
-  return (
-
-  
-        <ProgressBar style={{ width: `${scroll}%` }}></ProgressBar>
-
-
-
-  );
+  return <ProgressBar style={{ width: `${scroll}%` }}></ProgressBar>;
 };
 
 export default ScrollIndicator;

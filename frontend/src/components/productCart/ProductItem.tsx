@@ -22,7 +22,7 @@ function ProductItem({ product }: { product: Product }): JSX.Element {
       <div className="card__content | flow">
         <div className="card__content--container | flow">
           <h2 className="card__title">{product.product_name}</h2>
-          <p className="card__description">{product.product_price}</p>
+          <p className="card__description">{product.product_price}₽</p>
           <p className="card__description">{product.product_description}</p>
         </div>
         <button
