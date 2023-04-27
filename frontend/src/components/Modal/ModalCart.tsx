@@ -25,7 +25,7 @@ function ModalCart({ clickModal }: { clickModal: () => void }): JSX.Element {
   
       <form onSubmit={onHandleSubmit}>
         
-        <h1 style={{ fontSize: '30px', marginBottom: '30px' }}>Корзина</h1>
+        <h1 style={{ fontSize: '40px', marginBottom: '30px' }}>Корзина</h1>
         {carts.map((product) => (
         <ModalCartItem key={product.id} product={product} />
       ))}
@@ -49,22 +49,32 @@ function ModalCart({ clickModal }: { clickModal: () => void }): JSX.Element {
             pattern="8[0-9]{3}[0-9]{3}[0-9]{4}"
             required
             className="form-control"
-            placeholder="89990007777"
+            placeholder="+7-999-999-9999"
             onChange={(e) => setNumber(e.target.value)}
             value={number}
           />
         </div>
         <div className="col-auto">
-          <button type="submit" className="btn btn-outline-secondary">
-            Confirm identity
+        <button
+            type="submit"
+            className="btn btn-outline-secondary"
+            style={{
+              width: '400px',
+              color: 'black',
+              backgroundColor: '#b1fbe2',
+              border: 'none',
+            }}
+          >
+            Отправить заявку
           </button>
         </div>
         <button
-          className="btn btn-outline-danger"
+          className="btn btn-outline-secondary"
           type="button"
+          style={{width:"400px"}}
           onClick={clickModal}
         >
-          close
+          закрыть
         </button>
       </form>
     </div>
