@@ -22,13 +22,13 @@ function ServiceItem({
     // eslint-disable-next-line react/jsx-no-useless-fragment
     <>
       {!zayavka ? (
-        <article className="card">
+        <article className="card" style={{ width: '385px' }}>
           <img
             className="card__background"
             src={`${service.service_image}`}
             alt="Pho"
-            width="1920"
             height="2193"
+            style={{ width: '385px' }}
           />
           <div className="card__content | flow">
             <div className="card__content--container | flow">

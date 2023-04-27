@@ -21,63 +21,51 @@ function ModalCart({ clickModal }: { clickModal: () => void }): JSX.Element {
   console.log(carts);
 
   return (
-    <div className="cardM">
-      <div className="closeModal">
-        <button onClick={clickModal} className="buttonCloseModal">
-          <img src="close.svg" />
-        </button>
-      </div>
-      <h2 className="card-title cartSize">Корзина</h2>
-
-      {carts.map((product) => (
+    <div className="modalkaD">
+  
+      <form onSubmit={onHandleSubmit}>
+        
+        <h1 style={{ fontSize: '30px', marginBottom: '30px' }}>Корзина</h1>
+        {carts.map((product) => (
         <ModalCartItem key={product.id} product={product} />
       ))}
 
-      <form
-        onSubmit={onHandleSubmit}
-        className="row g-3"
-        style={{ margin: '50px 0 0 0' }}
-      >
-        <div className="formBuy">
-          <div className="col-auto">
-            <label className="visually-hidden">Имя</label>
-            <input
-              onChange={(e) => setName(e.target.value)}
-              value={name}
-              className="form-control"
-              placeholder="Имя"
-              required
-            />
-          </div>
-          <div className="col-auto">
-            <label className="visually-hidden">Номер телефона</label>
-            <input
-              className="form-control"
-              placeholder="+7(999)-999-99-99"
-              onChange={(e) => setNumber(e.target.value)}
-              value={number}
-              required
-            />
-          </div>
-          <div className="col-auto">
-            <button type="submit" className="btn btn-dark mb-3 butHover">
-              Сделать заказ
-            </button>
-          </div>
+        <div className="col-auto">
+          <label className="visually-hidden">name</label>
+          <input
+            onChange={(e) => setName(e.target.value)}
+            value={name}
+            type="name"
+            className="form-control"
+            placeholder="Имя"
+          />
         </div>
-        <div
-          style={{
-            margin: '0 0 0 100px',
-            width: '400px',
-            fontSize: '10px',
-            fontWeight: '700',
-          }}
+        <div className="col-auto">
+          <label className="visually-hidden">number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="8[0-9]{3}[0-9]{3}[0-9]{4}"
+            required
+            className="form-control"
+            placeholder="89990007777"
+            onChange={(e) => setNumber(e.target.value)}
+            value={number}
+          />
+        </div>
+        <div className="col-auto">
+          <button type="submit" className="btn btn-outline-secondary">
+            Confirm identity
+          </button>
+        </div>
+        <button
+          className="btn btn-outline-danger"
+          type="button"
+          onClick={clickModal}
         >
-          Нажимая кнопку «Отправить», я даю свое согласие на обработку моих
-          персональных данных, в соответствии с Федеральным законом от
-          27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для
-          целей, определенных в Согласии на обработку персональных данных
-        </div>
+          close
+        </button>
       </form>
     </div>
   );

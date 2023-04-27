@@ -1,6 +1,6 @@
 import React from 'react';
 import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
-
+import "./Map.css"
 function MapYandex(): JSX.Element {
   return (
     <div style={{ display: 'flex' }}>
@@ -17,14 +17,14 @@ function MapYandex(): JSX.Element {
           opacity: '0.8',
         }}
       >
-        <div style={{ fontSize: '40px' }}>Контакты</div>
+        <div style={{ fontSize: '40px', margin:"20px" }}>Контакты</div>
         <div>
-          <div>г. Ханты-Мансийск</div>
-          <div>+7 982 410 8293</div>
-          <div>@reole86</div>
+          <div className='textFooter'>г. Ханты-Мансийск</div>
+          <div className='textFooter'>+7 982 410 8293</div>
+          <div className='textFooter'>@reole86</div>
         </div>
-        <div>по будням 12.00 - 20.00</div>
-        <div>
+        <div className='textFooter'>по будням 12.00 - 20.00</div>
+        <div className='textFooter' style={{width:"600px"}}>
           Мы сами забираем и доставляем ваши изделия обратно. <br />
           По данному адресу можно сдать изделия только по предварительной
           договоренности.
@@ -39,7 +39,7 @@ function MapYandex(): JSX.Element {
               zoom: 15,
               controls: ['zoomControl', 'fullscreenControl'],
             }}
-            style={{ width: '800px', height: '400px' }}
+            style={{ width: '1000px', height: '400px' }}
             modules={['control.ZoomControl', 'control.FullscreenControl']}
           >
             <Placemark defaultGeometry={[60.998665, 69.062532]} />
