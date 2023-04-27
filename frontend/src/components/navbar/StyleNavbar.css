@@ -22,7 +22,9 @@
   color: white !important;
   font-size: 18px !important;
   font-weight: 700;
-
+}
+.zPov:hover{
+  color: #b1fbe2!important
 }
 
 #navbarNavAltMarkup {

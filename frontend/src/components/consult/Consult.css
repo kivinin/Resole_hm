@@ -1,0 +1,17 @@
+.consult{
+    background-image: url("https://bmarket24.ru/upload/resize_cache/iblock/import/450_450_1/2xt1Zvug78.jpg");
+    background-size: 2000px auto;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center
+}
+.textCon{
+    font-size: 40px;
+    color:white
+}
+.consultText{
+    display: flex;
+    flex-direction: column
+}

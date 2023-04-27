@@ -1,8 +1,8 @@
 .modalka {
   z-index: 999999;
   position: fixed;
-  left: 40%;
-  top: 35%;
+  left: 33%;
+  top: 15%;
   background-color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
@@ -14,8 +14,8 @@
 .modalkaD{
   z-index: 999999;
   position: fixed;
-  left: 40%;
-  top: 35%;
+  left: 33%;
+  top: 15%;
   background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
@@ -35,6 +35,7 @@
 .ulka {
   font-weight: 300;
   text-align: start;
+  font-size: 20px;
 }
 .cardM {
   display: grid;
@@ -93,3 +94,4 @@ td {
   color: black;
   border: none;
 }
+
