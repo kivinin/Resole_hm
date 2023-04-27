@@ -11,10 +11,15 @@ function Navbar(): JSX.Element {
   const { carts } = useSelector((store: RootState) => store.carts);
   const { user } = useSelector((store: RootState) => store.auth);
   const [modal, setModal] = useState(false);
+  const [modall, setModall] = useState(false);
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
+
   const clickModal = (): void => {
     setModal((prev) => !prev);
+  };
+  const clickModall = (): void => {
+    setModall((prev) => !prev);
   };
   return (
     <>
@@ -107,10 +112,21 @@ function Navbar(): JSX.Element {
                 </a>
                 <a className="nav-link disabled"> </a>
               </div>
-              <div className="navbar-nav">
-                <ModalSearchOrder />
-                <a className="nav-link disabled"> </a>
-              </div>
+              {modall ? (
+                <div className="navbar-nav">
+                  <ModalSearchOrder clickModall={clickModall} />
+                  <a className="nav-link disabled"> </a>
+                </div>
+              ) : (
+                <button
+                  type="button"
+                  style={{ left: '900px', position: 'relative',  color:"white" }}
+                  className="nav-link active zPov"
+                  onClick={clickModall}
+                >
+                  ПРОВЕРИТЬ ЗАКАЗ
+                </button>
+              )}
             </div>
           ) : (
             <>

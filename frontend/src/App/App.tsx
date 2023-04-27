@@ -49,6 +49,7 @@ function App(): JSX.Element {
   };
 
   window.addEventListener('scroll', onScroll);
+
   return (
     <div className="App">
       <Routes>

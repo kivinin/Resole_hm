@@ -12,6 +12,7 @@ import MapYandex from '../map/Map';
 import TextComp from '../Text/TextComp';
 import Header from '../Text/Header';
 import Consult from '../consult/Consult';
+import Present from '../windowPresent/Present';
 // import ModalOrder from '../Modal/ModalOrder';
 
 function MainPage(): JSX.Element {
@@ -22,6 +23,7 @@ function MainPage(): JSX.Element {
   return (
     <div>
       <Video />
+      {/* <Present/> */}
       <TextComp />
       <Header text={sl}/>
       <SliderPhoto />
