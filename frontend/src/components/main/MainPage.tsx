@@ -18,10 +18,12 @@ function MainPage(): JSX.Element {
   const [text, setText] = useState("УСЛУГИ")
   const [textp, setTextP] = useState("ТОВАРЫ")
   const [ex, setEx] = useState("ПРИМЕРЫ НАШИХ РАБОТ")
+  const [sl, setSL] = useState("ПОПРОБУЙ САМ")
   return (
     <div>
       <Video />
       <TextComp />
+      <Header text={sl}/>
       <SliderPhoto />
       <Header text={text}/>
       <ServiceList />

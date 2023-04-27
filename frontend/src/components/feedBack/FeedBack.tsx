@@ -3,8 +3,7 @@ import React from 'react';
 function FeedBack(): JSX.Element {
   return (
     <div style={{ display: 'flex', justifyContent: 'space-evenly', margin:"250px 0 0 0 " }}>
-      <div style={{ fontSize: '60px' }}>Отзывы</div>
-
+      <div style={{ fontSize: '90px', margin:"300px 0 0 0" }}>Отзывы</div>
       <div
         style={{
           width: '560px',
