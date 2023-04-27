@@ -19,6 +19,7 @@ function Consult(): JSX.Element {
           color: 'black',
           backgroundColor: '#b1fbe2',
           border: 'none',
+          fontSize:"25px"
         }}
       >
         Telegram
@@ -32,6 +33,7 @@ function Consult(): JSX.Element {
           color: 'black',
           backgroundColor: '#b1fbe2',
           border: 'none',
+          fontSize:"25px"
         }}
       >
         WhatsApp
