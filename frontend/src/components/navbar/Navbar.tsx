@@ -5,6 +5,7 @@ import { Outlet } from 'react-router';
 import { RootState, useAppDispatch } from '../../store';
 import ModalCart from '../Modal/ModalCart';
 import { logoutUser } from '../Auth/authSlice';
+import ModalSearchOrder from '../ModalSearchOrder/ModalSearchOrder';
 
 function Navbar(): JSX.Element {
   const { carts } = useSelector((store: RootState) => store.carts);
@@ -74,9 +75,7 @@ function Navbar(): JSX.Element {
               <a className="nav-link disabled"> </a>
             </div>
             <div className="navbar-nav">
-              <a className="nav-link active zPov" aria-current="page" href="#">
-                ПРОВЕРИТЬ ЗАКАЗ
-              </a>
+        <ModalSearchOrder />
               <a className="nav-link disabled"> </a>
             </div>
             {/* <button type="button" className="nav-link active" onClick={() => dispatch(logoutUser())} style={{ border: 'none' }}>

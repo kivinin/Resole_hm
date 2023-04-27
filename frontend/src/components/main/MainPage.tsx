@@ -16,9 +16,8 @@ function MainPage(): JSX.Element {
   return (
     <div>
       <Video />
-      <TextComp/>
+      <TextComp />
       <SliderPhoto />
-      <ModalSearchOrder />
       <ServiceList />
       <ProductList />
       <Swiper22 />
