@@ -1,19 +1,11 @@
 .mainWrapper {
-  width: calc(100vw - 17px);
+  width: 1000px;
   height: calc(100vh - 17px);
-  display: grid;
-}
-
-.contentWrapper {
-  height: 90%;
-  width: 90%;
-  align-self: center;
-  justify-self: center;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 40px;
+  position: relative;
+  left: 21%;
   align-content: center;
-  justify-content: center;
+  position: relative;
+  top: 150px;
 }
 .before-after-slider {
   width: 100%;

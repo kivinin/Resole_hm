@@ -26,6 +26,19 @@ router.post('/sign-in', async (req, res) => {
   }
 });
 
+router.get('/verification', async (req, res) => {
+  const userId = req.session.userid;
+  if (userId) {
+    const user = await Admin.findOne({
+      where: { id: userId },
+      attributes: { exclude: ['password'] },
+    });
+    res.status(200).json(user);
+  } else {
+    res.status(403).json({ message: 'no session' });
+  }
+});
+
 router.get('/logout', async (req, res) => {
   req.session.destroy((error) => {
     if (error) {

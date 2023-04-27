@@ -14,22 +14,11 @@ function SliderPhoto(): JSX.Element {
 
   return (
     <div>
-              <div style={{fontSize:"50px", fontWeight:"700", margin:"150px 0 0 0"}}> ПОПРОБУЙТЕ САМИ</div>
-      <div className="mainWrapper" style={{ width: '1000px' }}>
-        <div
-          className="contentWrapper"
-          style={{
-            width: '3000px',
-            marginRight: 0,
-            marginLeft: '450px',
-            marginTop: 0,
-          }}
-        >
-          <ReactBeforeSliderComponent
-            firstImage={FIRST_IMAGE}
-            secondImage={SECOND_IMAGE}
-          />
-        </div>
+      <div className="mainWrapper">
+        <ReactBeforeSliderComponent
+          firstImage={FIRST_IMAGE}
+          secondImage={SECOND_IMAGE}
+        />
       </div>
     </div>
   );
