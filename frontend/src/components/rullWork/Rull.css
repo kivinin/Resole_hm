@@ -19,7 +19,7 @@
   .stepper-item::before {
     position: absolute;
     content: "";
-    border-bottom: 2px solid hwb(286 33% 22%);
+    border-bottom: 2px solid hwb(0 0% 100%);
     width: 100%;
     top: 40px;
     left: -50%;
@@ -79,6 +79,8 @@
   }
 
   .imgStep{
+    display: flex;
+    justify-content: center;
     width: 100px;
     height: 100px;
   }

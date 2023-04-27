@@ -21,7 +21,9 @@ function ModalOrder({ clickModal }: { clickModal: () => void }): JSX.Element {
   return (
     <div className="modalka">
       <form onSubmit={onHandleSubmit}>
-        <h1 style={{ fontSize: '30px', marginBottom: '30px' }}>Отправить заявку</h1>
+        <h1 style={{ fontSize: '35px', marginBottom: '30px' }}>
+          Отправить заявку
+        </h1>
         <ul className="ulka">
           <li>Приедем в удобное время и место</li>
           <li>Оставим квитанции с подробным описанием</li>
@@ -52,7 +54,7 @@ function ModalOrder({ clickModal }: { clickModal: () => void }): JSX.Element {
             pattern="8[0-9]{3}[0-9]{3}[0-9]{4}"
             required
             className="form-control"
-            placeholder="89990007777"
+            placeholder="+7-999-999-9999"
             onChange={(e) => setNumber(e.target.value)}
             value={number}
           />
@@ -68,16 +70,26 @@ function ModalOrder({ clickModal }: { clickModal: () => void }): JSX.Element {
           />
         </div>
         <div className="col-auto">
-          <button type="submit" className="btn btn-outline-secondary">
-            Confirm identity
+          <button
+            type="submit"
+            className="btn btn-outline-secondary"
+            style={{
+              width: '400px',
+              color: 'black',
+              backgroundColor: '#b1fbe2',
+              border: 'none',
+            }}
+          >
+            Отправить заявку
           </button>
         </div>
         <button
-          className="btn btn-outline-danger"
+          className="btn btn-outline-secondary"
           type="button"
+          style={{width:"400px"}}
           onClick={clickModal}
         >
-          close
+          закрыть
         </button>
       </form>
     </div>
