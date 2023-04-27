@@ -4,21 +4,22 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { loginUser } from './authSlice';
 import { RootState, useAppDispatch } from '../../store';
+import { useNavigate } from 'react-router';
 
 function Login(): JSX.Element {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const dispatch = useAppDispatch();
-  const { error } = useSelector((store: RootState) => store.auth);
-
+  const { user, error } = useSelector((store: RootState) => store.auth);
+  const navigate = useNavigate();
   const autorization = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     dispatch(loginUser({ email, password }));
   };
-  // if ('id' in user) {
-  //   navigate('/');
-  // }
+  if ('id' in user) {
+    navigate('/list');
+  }
   return (
     <div className="d-flex justify-content-center mt-5">
       <form onSubmit={autorization} className="formlog">

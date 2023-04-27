@@ -15,12 +15,17 @@ import { Container, ProgressBar, ScrollContent, Heading } from './Styles';
 import NotFound from '../components/404/NotFound';
 import UpdateFormServiceForAdmin from '../components/servicesForAdmin/UpdateFormServiceForAdmin';
 import UpdateFormProductForAdmin from '../components/productsForAdmin/UpdateFormProductForAdmin';
+import { verificationUser } from '../components/Auth/authSlice';
 
 // import ServiceList from '../components/services/ServiceList';
 // import ProductList from '../components/productCart/ProductList';
 
 function App(): JSX.Element {
   const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(verificationUser());
+  }, [dispatch]);
 
   useEffect(() => {
     dispatch(getService());
