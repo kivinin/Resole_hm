@@ -14,13 +14,12 @@ function SliderPhoto(): JSX.Element {
 
   return (
     <div>
-      <div className="mainWrapper" style={{ width: '1000px' }}>
+      <div className="mainWrapper">
         <div
           className="contentWrapper"
           style={{
-            width: '3000px',
+            width: '100%',
             marginRight: 0,
-            marginLeft: '700px',
             marginTop: 0,
           }}
         >

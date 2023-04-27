@@ -1,7 +1,7 @@
 .mainWrapper {
   width: calc(100vw - 17px);
   height: calc(100vh - 17px);
-  display: grid;
+  display: flex;
 }
 
 .contentWrapper {
@@ -10,7 +10,6 @@
   align-self: center;
   justify-self: center;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
   align-content: center;
   justify-content: center;
