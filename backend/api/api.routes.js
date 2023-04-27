@@ -67,7 +67,7 @@ router
   .post("/client", async (req, res) => {
     try {
       const { name, number, adress } = req.body;
-
+      console.log("1233456789");
       const token = "5976899897:AAHNOrGZ_VSY300IfhA_mQY_QWQAv3Moe4k";
       const idChat = "676975446";
       const uniqKey = Math.random().toString(36).slice(-8);
@@ -84,16 +84,17 @@ router
       const postBot = await fetch(
         `https://api.telegram.org/bot${token}/sendMessage?chat_id=${idChat}&parse_mode=html&text=${msg}`
       );
-
+      console.log(name, number, adress);
       const clients = await Client.create({ name, number, adress });
+      console.log(uniqKey, "+++++++++");
 
       const customers = await Service_order.create({
         client_id: clients.id,
-        service_id: 1,
+        service_id: 38,
         status: false,
         unique_key: uniqKey,
       });
-
+      console.log(customers, "-________----");
       res.json(clients, customers, postBot);
     } catch ({ message }) {
       res.json(message);
@@ -127,7 +128,7 @@ router.get("/serviceorders", async (req, res) => {
     const servicesorders = await Service_order.findAll({
       include: { model: Client },
     });
-
+    console.log(servicesorders);
     res.json(servicesorders);
   } catch ({ message }) {
     res.json(message);
