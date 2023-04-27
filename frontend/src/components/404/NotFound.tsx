@@ -33,7 +33,9 @@ export default function NotFound(): JSX.Element {
             </p>
           </div>
           <div className="error__nav e-nav">
-            <a href="/" target="_blanck" className="e-nav__link"> </a>
+            <a href="/" target="_blanck" className="e-nav__link">
+              {' '}
+            </a>
           </div>
         </div>
       </section>

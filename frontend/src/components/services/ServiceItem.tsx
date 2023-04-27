@@ -34,7 +34,7 @@ function ServiceItem({
             <div className="card__content--container | flow">
               <h2 className="card__title">{service.service_name}</h2>
               <p className="card__description">{service.service_description}</p>
-              <p className="card__description">{service.price}</p>
+              <p className="card__description">{service.price}₽</p>
             </div>
             <button type="button" className="card__button" onClick={clickModal}>
               Заказать услугу

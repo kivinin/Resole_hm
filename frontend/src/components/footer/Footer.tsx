@@ -1,6 +1,5 @@
 import React from 'react';
 import { MDBFooter } from 'mdb-react-ui-kit';
-import MapYandex from '../map/Map';
 import './footer.css';
 
 function Footer(): JSX.Element {
@@ -34,9 +33,13 @@ function Footer(): JSX.Element {
           </symbol>
         </svg>
 
-        <div style={{ display: 'flex', alignItems:"center"}}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
           <div>
-            <img src="logo.jpg" style={{ width: '150px', height: '150px', borderRadius:"50%"}} />
+            <img
+              src="logo.jpg"
+              style={{ width: '150px', height: '150px', borderRadius: '50%' }}
+              alt="phto"
+            />
           </div>
           <div
             style={{
@@ -45,7 +48,7 @@ function Footer(): JSX.Element {
               flexDirection: 'row',
               alignItems: 'stretch',
               justifyContent: 'space-around',
-              width:"600px"
+              width: '600px',
             }}
           >
             <div
@@ -56,7 +59,7 @@ function Footer(): JSX.Element {
                 justifyContent: 'space-around',
               }}
             >
-              <div className=''>+7 982 410 8293</div>
+              <div className="">+7 982 410 8293</div>
               <div>RESOLE@YANDEX.RU</div>
               <div>ЕЖЕДНЕВНО 12:00 - 20:00 </div>
             </div>
@@ -81,14 +84,14 @@ function Footer(): JSX.Element {
               }}
             >
               <div>ЕЩЕ</div>
-              <div >О НАС</div>
+              <div>О НАС</div>
               <div>ВАКАНСИИ</div>
               <div>ОТЗЫВЫ</div>
             </div>
           </div>
           <div>
             <div className="social instagram">
-              <a href="#" target="_blank" title="Это Instagram">
+              <a href="https://instagram.com/resole.86?igshid=YmMyMTA2M2Y=" target="_blank" title="Это Instagram">
                 <svg>
                   <use xlinkHref="#icon_instagram"></use>
                 </svg>
@@ -102,7 +105,7 @@ function Footer(): JSX.Element {
               </a>
             </div>
             <div className="social vk">
-              <a href="#" target="_blank" title="Это Vk">
+              <a href="https://vk.com/resole86" target="_blank" title="Это Vk">
                 <svg>
                   <use xlinkHref="#icon_vk"></use>
                 </svg>
@@ -120,9 +123,13 @@ function Footer(): JSX.Element {
               className="tn-atom__img t-img loaded"
               data-original="https://static.tildacdn.com/tild3035-3736-4335-a539-613938626365/HorizontalLogos5.png"
               src="https://thumb.tildacdn.com/tild3035-3736-4335-a539-613938626365/-/resize/856x/-/format/webp/HorizontalLogos5.png"
+              alt="errorlol"
+              style={{ display: 'flex', flexDirection: 'column' }}
             />
           </div>
-          <div  style={{width:"200px", color:"white"}}>Made by Elbrus Bears 2023-{new Date().getFullYear()}</div>
+          <div style={{ width: '200px', color: 'white' }}>
+            Made by Elbrus Bears 2023-{new Date().getFullYear()}
+          </div>
         </div>
       </div>
     </MDBFooter>

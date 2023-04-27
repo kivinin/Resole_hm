@@ -3,8 +3,8 @@
 }
 .social a {
 	display: block;
-	width: 48px;
-	height: 48px;
+	width: 45px;
+	height: 45px;
 	margin: 0 10px 10px 0;
 	text-align: center;
 	color: #fff;
@@ -22,7 +22,7 @@
 	height: 32px;
 }
 .instagram a {
-    background: #3f729b
+    background: #dc56ca
 }
 .telegram a {
     background: #249bd7
