@@ -84,12 +84,6 @@ function Navbar(): JSX.Element {
                 </a>
                 <a className="nav-link disabled"> </a>
               </div>
-              {/* <div className="navbar-nav">
-              <a className="nav-link active zPov" aria-current="page" href="#">
-                ДО/ПОСЛЕ
-              </a>
-              <a className="nav-link disabled"> </a>
-            </div> */}
               <div className="navbar-nav">
                 <a
                   className="nav-link active zPov"
@@ -110,6 +104,7 @@ function Navbar(): JSX.Element {
               <div className="navbar-nav" style={{}}>
                 <button
                   type="button"
+                  style={{ left: '900px', position: 'relative' }}
                   className="nav-link active zPov"
                   onClick={() => dispatch(logoutUser())}
                 >
@@ -119,6 +114,7 @@ function Navbar(): JSX.Element {
               <div className="navbar-nav" style={{}}>
                 <button
                   type="button"
+                  style={{ left: '100px', position: 'relative' }}
                   className="nav-link active zPov"
                   onClick={() => navigate('/list')}
                 >

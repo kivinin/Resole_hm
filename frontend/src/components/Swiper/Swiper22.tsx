@@ -45,10 +45,7 @@ function Swiper22(): JSX.Element {
           <img src="photo7.jpg" alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img
-            src="https://fedorshmidt.com/images/uploads/gallery/222_5443-as-Smart-Object-xxx.jpg"
-            alt="slide_image"
-          />
+          <img src="photo6.jpg" alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
           <img src="photo5.jpg" alt="slide_image" />
