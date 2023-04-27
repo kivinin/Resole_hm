@@ -33,6 +33,19 @@ function Navbar(): JSX.Element {
           >
             Resole
           </div>
+          <div
+            style={{
+              position: 'absolute',
+              color: '#b1fbe2',
+              fontSize: '8rem',
+              left: '46.5%',
+              bottom: '-59%',
+              letterSpacing: '40px',
+              opacity: '0.7',
+            }}
+          >
+            Resole
+          </div>
           <div>
             <img
               style={{ width: '70px', height: '70px', borderRadius: '50%' }}

@@ -59,9 +59,11 @@ function Footer(): JSX.Element {
                 justifyContent: 'space-around',
               }}
             >
-              <div className="">+7 982 410 8293</div>
-              <div>RESOLE@YANDEX.RU</div>
-              <div>ЕЖЕДНЕВНО 12:00 - 20:00 </div>
+
+              <div className='textFot'>+7 982 410 8293</div>
+              <div className='textFot'>RESOLE@YANDEX.RU</div>
+              <div className='textFot'> 12:00 - 20:00 </div>
+
             </div>
             <div
               style={{
@@ -71,9 +73,9 @@ function Footer(): JSX.Element {
                 justifyContent: 'space-around',
               }}
             >
-              <div>МЕНЮ </div>
-              <div>УСЛУГИ</div>
-              <div>ДО/ПОСЛЕ</div>
+              <div className='textFot'>МЕНЮ </div>
+              <div className='textFot'>УСЛУГИ</div>
+              <div className='textFot'>ДО/ПОСЛЕ</div>
             </div>
             <div
               style={{
@@ -83,6 +85,7 @@ function Footer(): JSX.Element {
                 justifyContent: 'space-around',
               }}
             >
+
               <div>ЕЩЕ</div>
               <div>О НАС</div>
               <div>ВАКАНСИИ</div>
@@ -119,6 +122,7 @@ function Footer(): JSX.Element {
               </a>
               <div></div>
             </div>
+
             <img
               className="tn-atom__img t-img loaded"
               data-original="https://static.tildacdn.com/tild3035-3736-4335-a539-613938626365/HorizontalLogos5.png"

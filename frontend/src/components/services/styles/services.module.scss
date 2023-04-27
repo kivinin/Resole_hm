@@ -5,9 +5,9 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 100px;
-    background:grey;
-  }
-    &__item {
+    background: -webkit-linear-gradient(180deg, #ffffff,#a1a1a1,#ffffff);/* Chrome 10-25, Safari 5.1-6 */                         
+     background: linear-gradient(180deg, #ffffff,#a1a1a1,#ffffff);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                             }
+  &__item {
     background-color: rgba(17, 25, 40, 0.25);
     margin-top: 30px;
     border-radius: 12px;
