@@ -11,7 +11,7 @@ import { EffectCoverflow, Pagination, Navigation } from 'swiper';
 
 function Swiper22(): JSX.Element {
   return (
-    <div className="container">
+    <div className="container" style={{ marginTop: '200px' }}>
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -28,7 +28,6 @@ function Swiper22(): JSX.Element {
         navigation={{
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
-          // clickable: true,
         }}
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper_container"
@@ -75,16 +74,6 @@ function Swiper22(): JSX.Element {
             alt="slide_image"
           />
         </SwiperSlide>
-
-        <div className="slider-controler">
-          <div className="swiper-button-prev slider-arrow">
-            {/* <ion-icon name="arrow-back-outline"></ion-icon> */}
-          </div>
-          <div className="swiper-button-next slider-arrow">
-            {/* <ion-icon name="arrow-forward-outline"></ion-icon> */}
-          </div>
-          <div className="swiper-pagination"> </div>
-        </div>
       </Swiper>
     </div>
   );
