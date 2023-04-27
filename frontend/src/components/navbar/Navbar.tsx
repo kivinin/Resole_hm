@@ -17,7 +17,7 @@ function Navbar(): JSX.Element {
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary navBarScroll">
-        <div className="container-fluid blockNavbar">
+        <div className="container-fluid blockNavbar" id="navBAr">
           <div
             style={{
               position: 'absolute',

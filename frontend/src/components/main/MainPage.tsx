@@ -15,6 +15,7 @@ import Header from '../Text/Header';
 
 function MainPage(): JSX.Element {
   const [text, setText] = useState("УСЛУГИ")
+  const [textp, setTextP] = useState("ТОВАРЫ")
   return (
     <div>
       <Video />
@@ -22,6 +23,7 @@ function MainPage(): JSX.Element {
       <SliderPhoto />
       <Header text={text}/>
       <ServiceList />
+      <Header text={textp}/>
       <ProductList />
       <Swiper22 />
       <Rull />

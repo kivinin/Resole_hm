@@ -81,7 +81,7 @@ function Footer(): JSX.Element {
               }}
             >
               <div>ЕЩЕ</div>
-              <div>О НАС</div>
+              <div >О НАС</div>
               <div>ВАКАНСИИ</div>
               <div>ОТЗЫВЫ</div>
             </div>

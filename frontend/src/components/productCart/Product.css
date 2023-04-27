@@ -1,3 +1,6 @@
 .productList{
     display: flex;
 }
+.cardPro{
+    display: flex;
+}
