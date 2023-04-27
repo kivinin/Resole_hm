@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Video from '../features/Video/Video';
 import SliderPhoto from '../features/SliderPhoto/SliderPhoto';
 import ServiceList from '../services/ServiceList';
@@ -10,14 +10,17 @@ import Rull from '../rullWork/Rull';
 import FeedBack from '../feedBack/FeedBack';
 import MapYandex from '../map/Map';
 import TextComp from '../Text/TextComp';
+import Header from '../Text/Header';
 // import ModalOrder from '../Modal/ModalOrder';
 
 function MainPage(): JSX.Element {
+  const [text, setText] = useState("УСЛУГИ")
   return (
     <div>
       <Video />
       <TextComp />
       <SliderPhoto />
+      <Header text={text}/>
       <ServiceList />
       <ProductList />
       <Swiper22 />
