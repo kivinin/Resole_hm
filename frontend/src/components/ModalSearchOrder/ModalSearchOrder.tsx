@@ -22,12 +22,12 @@ function ModalSearchOrder(): JSX.Element {
     <>
       <button
         type="button"
-        className="btn btn-outline-primary"
+        className="nav-link active zPov"
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
         data-bs-whatever="@mdo"
       >
-        Проверить статус заказа
+        ПРОВЕРИТЬ ЗАКАЗ
       </button>
       <div
         className="modal fade"
