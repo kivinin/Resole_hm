@@ -14,7 +14,9 @@ function SliderPhoto(): JSX.Element {
 
   return (
     <div>
+
       <div className="mainWrapper">
+
         <div
           className="contentWrapper"
           style={{
