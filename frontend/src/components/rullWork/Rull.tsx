@@ -6,8 +6,6 @@ function Rull(): JSX.Element {
     <div className="borderRull">
       <div style={{ fontSize: '50px', margin: '100px 0 100px 0',fontWeight:"700"}}>
         КАК МЫ РАБОТАЕМ
-
-
       </div>
       <div className="stepper-wrapper">
         <div className="stepper-item completed">
