@@ -17,7 +17,7 @@ function Video(): JSX.Element {
         <div className="container">
           <div className="containerTitle">
             <div className="videoName">ХИМЧИСТКА ОБУВИ </div>
-            <div className="videoName" style={{margin:"0 0 30px 0"}}>С ДОСТАВКОЙ</div>
+            <div className="videoName" style={{margin:"0 0 40px 0"}}>С ДОСТАВКОЙ</div>
             <div className="videoTitle" >
               БЕСПЛАТНО ЗАБЕРЕМ И ПРИВЕЗЕМ ОБРАТНО
             </div>
@@ -27,7 +27,7 @@ function Video(): JSX.Element {
             {!zayavka ? (
               <button
                 type="button"
-                style={{color:"#000000", backgroundColor:"#80d1d1", borderRadius:"100px", MozBorderRadius:"100px", WebkitBorderRadius:"100px", width:"250px", height:"70px", fontSize:"25px", fontWeight:"500", margin:"20px 0 0 0"}}
+                style={{color:"#000000", backgroundColor:"#80d1d1", borderRadius:"100px", MozBorderRadius:"100px", WebkitBorderRadius:"100px", width:"250px", height:"70px", fontSize:"25px", fontWeight:"500", margin:"40px 0 0 0"}}
                 onClick={clickModal}
               >
                 Заказать услугу

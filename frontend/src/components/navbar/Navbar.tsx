@@ -24,7 +24,7 @@ function Navbar(): JSX.Element {
               color: '#b1fbe2',
               fontSize: '8rem',
               left: '47%',
-              bottom: '-49%',
+              bottom: '-59%',
               letterSpacing: '40px',
               opacity: '0.7',
             }}
