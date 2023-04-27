@@ -47,7 +47,25 @@
   left: 0;
 }
 .container {
+  display: flex;
+align-items: flex-start;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.videoName{
+  font-size: 45px;
+  color:white;
+}
+.videoTitle{
+  font-size: 20px;
+  color:white;
+  font-weight: 600;
+}
+.containerTitle{
+display: flex;
+font-weight: 600;
+align-items: flex-start;
+flex-direction: column;
 }
