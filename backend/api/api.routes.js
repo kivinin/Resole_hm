@@ -87,17 +87,13 @@ router
       console.log(name, number, adress);
       const clients = await Client.create({ name, number, adress });
       console.log(uniqKey, "+++++++++");
-      try {
-        const customers = await Service_order.create({
-          client_id: clients.id,
-          service_id: 1,
-          status: false,
-          unique_key: uniqKey,
-        }); 
-        
-      } catch (message) {
-        console.log(message);
-      }
+
+      const customers = await Service_order.create({
+        client_id: clients.id,
+        service_id: 38,
+        status: false,
+        unique_key: uniqKey,
+      });
       console.log(customers, "-________----");
       res.json(clients, customers, postBot);
     } catch ({ message }) {
