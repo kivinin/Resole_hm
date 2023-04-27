@@ -82,7 +82,7 @@ function ModalSearchOrder(): JSX.Element {
                     className="card-img-top"
                     style={{ maxWidth: '240px' }}
                   />
-                  <p>Комментарий и мастера: {el.comments}</p>
+                  <p>Комментарий мастера: {el.comments}</p>
                 </div>
               ))}
             <div className="modal-footer">

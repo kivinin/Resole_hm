@@ -14,7 +14,9 @@ function SerchOrderList(): JSX.Element {
     <>
       <br></br>
       <br></br>
-      <p className="fs-1 fw-bold">ЗАКАЗЫ</p>
+      <p className="fs-1 fw-bold" style={{ color: 'black' }}>
+        ЗАКАЗЫ
+      </p>
       <br></br>
       <br></br>
       <table className="table">
@@ -43,7 +45,9 @@ function SerchOrderList(): JSX.Element {
       <br></br>
       <br></br>
       <br></br>
-      <p className="fs-1 fw-bold">СЕРВИСЫ</p>
+      <p className="fs-1 fw-bold" style={{ color: 'black' }}>
+        СЕРВИСЫ
+      </p>
       <br></br>
       <br></br>
       <ServicesForAdminList />
@@ -51,7 +55,9 @@ function SerchOrderList(): JSX.Element {
       <br></br>
       <br></br>
       <br></br>
-      <p className="fs-1 fw-bold">ПРОДУКТЫ</p>
+      <p className="fs-1 fw-bold" style={{ color: 'black' }}>
+        ПРОДУКТЫ
+      </p>
       <br></br>
       <br></br>
       <ProductForAdminList />
