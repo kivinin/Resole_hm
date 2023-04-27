@@ -20,9 +20,15 @@
 .zPov {
   z-index: 99999;
   color: white !important;
+  font-size: 18px !important;
+  font-weight: 700;
+
 }
 
 #navbarNavAltMarkup {
   display: flex;
   margin: 0 0 0 10px;
+}
+#navbarNavAltMarkup{
+  margin: 0 0px 0 50px;
 }

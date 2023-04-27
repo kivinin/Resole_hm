@@ -99,9 +99,9 @@ function Navbar(): JSX.Element {
           </div>
         </div>
         <div className="blockInfo">
-          <div style={{ width: '200px' }}>+7 982 410 8293</div>
-          <div style={{ width: '200px', fontSize: '13px' }}>
-            12.00 - 20.00 по будням
+          <div style={{ width: '200px', fontSize: '22px', fontWeight:"700" }}>+7 982 410 8293</div>
+          <div style={{ width: '200px', fontSize: '20px' }}>
+            12.00 - 20.00 
           </div>
         </div>
       </nav>

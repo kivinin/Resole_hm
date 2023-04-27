@@ -27,7 +27,7 @@ function Video(): JSX.Element {
             {!zayavka ? (
               <button
                 type="button"
-                style={{color:"#000000", backgroundColor:"#80d1d1", borderRadius:"100px", MozBorderRadius:"100px", WebkitBorderRadius:"100px", width:"250px", height:"70px", fontSize:"25px", fontWeight:"500", margin:"40px 0 0 0"}}
+                style={{color:"#000000", backgroundColor:"#b1fbe2", borderRadius:"100px", MozBorderRadius:"100px", WebkitBorderRadius:"100px", width:"250px", height:"70px", fontSize:"25px", fontWeight:"500", margin:"40px 0 0 0"}}
                 onClick={clickModal}
               >
                 Заказать услугу
