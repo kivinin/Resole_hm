@@ -3,7 +3,7 @@ import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 import "./Map.css"
 function MapYandex(): JSX.Element {
   return (
-    <div style={{ display: 'flex' }}>
+    <div id='contacts' style={{ display: 'flex' }}>
       <div
         style={{
           display: 'flex',

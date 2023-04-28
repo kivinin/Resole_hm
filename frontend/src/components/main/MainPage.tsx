@@ -13,6 +13,7 @@ import TextComp from '../Text/TextComp';
 import Header from '../Text/Header';
 import Consult from '../consult/Consult';
 import Present from '../windowPresent/Present';
+import Btn from '../Btn/Btn';
 // import ModalOrder from '../Modal/ModalOrder';
 
 function MainPage(): JSX.Element {
@@ -37,6 +38,7 @@ function MainPage(): JSX.Element {
       <Rull />
       <MapYandex />
       <FeedBack />
+      <Btn />
       <Footer />
     </div>
   );

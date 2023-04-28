@@ -11,7 +11,7 @@ import { EffectCoverflow, Pagination, Navigation } from 'swiper';
 
 function Swiper22(): JSX.Element {
   return (
-    <div className="container">
+    <div id='doposle' className="container">
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
