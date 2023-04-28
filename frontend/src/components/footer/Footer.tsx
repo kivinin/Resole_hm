@@ -69,9 +69,10 @@ function Footer(): JSX.Element {
                 justifyContent: 'space-around',
               }}
             >
-              <div className='textFot'>МЕНЮ </div>
+              <div className='textFot'>КОНТАКТЫ </div>
               <div className='textFot'>УСЛУГИ</div>
               <div className='textFot'>ДО/ПОСЛЕ</div>
+              <div className='textFot'>ОТЗЫВЫ</div>
             </div>
             <div
               style={{
@@ -81,10 +82,7 @@ function Footer(): JSX.Element {
                 justifyContent: 'space-around',
               }}
             >
-              <div className='textFot'>ЕЩЕ</div>
-              <div className='textFot'>О НАС</div>
-              <div className='textFot'>ВАКАНСИИ</div>
-              <div className='textFot'>ОТЗЫВЫ</div>
+
             </div>
           </div>
           <div style={{margin:""}}>

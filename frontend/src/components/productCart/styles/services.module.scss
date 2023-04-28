@@ -1,0 +1,11 @@
+.productList {
+  &__container {
+    display: flex;
+    background: -webkit-linear-gradient(180deg, #ffffff, #a1a1a1, #ffffff);
+    background: linear-gradient(180deg, #ffffff, #a1a1a1, #ffffff);
+  }
+}
+
+.cardPro {
+  display: flex;
+}
