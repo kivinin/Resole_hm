@@ -1,10 +1,9 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router';
 import { loginUser } from './authSlice';
 import { RootState, useAppDispatch } from '../../store';
-import { useNavigate } from 'react-router';
 
 function Login(): JSX.Element {
   const [email, setEmail] = useState('');

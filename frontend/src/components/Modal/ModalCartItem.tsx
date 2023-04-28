@@ -17,10 +17,10 @@ function ModalCartItem({ product }: { product: Product }): JSX.Element {
                   alt=""
                 />
               </th>
-              <th scope="col" style={{ width: '20%', fontSize:"22px" }}>
+              <th scope="col" style={{ width: '20%', fontSize: '22px' }}>
                 {product.product_price} ₽
               </th>
-              <th scope="col" style={{ width: '60%', fontSize:"22px"  }}>
+              <th scope="col" style={{ width: '60%', fontSize: '22px' }}>
                 {product.product_name}
               </th>
             </tr>

@@ -1,9 +1,16 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React from 'react';
 
 function FeedBack(): JSX.Element {
   return (
-    <div style={{ display: 'flex', justifyContent: 'space-evenly', margin:"250px 0 0 0 " }}>
-      <div style={{ fontSize: '90px', margin:"300px 0 0 0" }}>Отзывы</div>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'space-evenly',
+        margin: '250px 0 0 0 ',
+      }}
+    >
+      <div style={{ fontSize: '90px', margin: '300px 0 0 0' }}>Отзывы</div>
       <div
         style={{
           width: '560px',
@@ -21,7 +28,7 @@ function FeedBack(): JSX.Element {
             boxSizing: 'border-box',
           }}
           src="https://yandex.ru/maps-reviews-widget/51912465174?comments"
-        ></iframe>
+        />
       </div>
     </div>
   );
