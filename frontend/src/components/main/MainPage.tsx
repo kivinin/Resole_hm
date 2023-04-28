@@ -33,7 +33,6 @@ function MainPage(): JSX.Element {
 
       <Svyaz/>
       <Header text={text}/>
-      <Header text={text} />
       <ServiceList />
       <Header text={textp} />
       <ProductList />

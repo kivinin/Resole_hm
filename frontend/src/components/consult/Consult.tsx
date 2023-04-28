@@ -10,6 +10,7 @@ function Consult(): JSX.Element {
         </div>
         <div className="textCon">Отправьте фото изделий для оценки работ</div>
       </div>
+      <a href='https://t.me/Resole86'>
       <button
         type="submit"
         className="btn btn-outline-secondary"
@@ -24,6 +25,8 @@ function Consult(): JSX.Element {
       >
         Telegram
       </button>
+      </a>
+      <a href="https://vk.com/resole86">
       <button
         type="submit"
         className="btn btn-outline-secondary"
@@ -36,8 +39,9 @@ function Consult(): JSX.Element {
           fontSize: '25px',
         }}
       >
-        WhatsApp
+        VK
       </button>
+      </a>
     </div>
   );
 }
