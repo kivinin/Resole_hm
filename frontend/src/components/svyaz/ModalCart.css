@@ -1,0 +1,66 @@
+.modalkaSvyaz {
+  z-index: 999999;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: auto;
+  opacity: 1 !important;
+  margin: 20px 0 0 0 ;
+}
+.conSv{
+  background-image:url("https://kartinkin.net/uploads/posts/2021-07/1625814551_20-kartinkin-com-p-krutie-oboi-s-krossovkami-krasivie-22.jpg");
+  background-size:2000px 1500px;
+  height:400px
+}
+.form-control {
+  margin: 10px;
+  width: 560px;
+}
+.col-auto {
+  margin: 10px;
+}
+.ulka {
+  font-weight: 300;
+  text-align: start;
+  font-size: 20px;
+  border: none !important
+}
+.cardM {
+  display: grid;
+  position: absolute;
+  border-radius: 0;
+  width: 600px;
+  height: auto;
+  top: 200%;
+  left: 30%;
+  overflow: 1;
+  flex-direction: row;
+  border: 1px solid black;
+  border: none !important
+}
+
+.ModalCartItem {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.closeModal {
+  display: flex;
+  width: 100%;
+  border-right: 0px solid white;
+  border-left: 0px solid white;
+  padding: 12px 2px;
+}
+.buttonCloseModal {
+  border: none;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+}
+.cartSize {
+  font-size: 35px;
+}
+
