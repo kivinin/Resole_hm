@@ -4,10 +4,6 @@
   "private": true,
   "proxy": "http://localhost:4000",
   "dependencies": {
-    "@floating-ui/core": "^1.2.6",
-    "@floating-ui/dom": "^1.2.6",
-    "@floating-ui/react": "^0.23.1",
-    "@floating-ui/react-native": "^0.9.0",
     "@pbe/react-yandex-maps": "^1.2.4",
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
