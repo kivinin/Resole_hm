@@ -14,8 +14,8 @@ import TextComp from '../Text/TextComp';
 import Header from '../Text/Header';
 import Consult from '../consult/Consult';
 import Present from '../windowPresent/Present';
+import Svyaz from '../svyaz/Svyaz';
 import Btn from '../Btn/Btn';
-// import ModalOrder from '../Modal/ModalOrder';
 
 
 function MainPage(): JSX.Element {
@@ -30,6 +30,9 @@ function MainPage(): JSX.Element {
       <TextComp />
       <Header text={sl} />
       <SliderPhoto />
+
+      <Svyaz/>
+      <Header text={text}/>
       <Header text={text} />
       <ServiceList />
       <Header text={textp} />
