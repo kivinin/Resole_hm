@@ -17,7 +17,6 @@ import Present from '../windowPresent/Present';
 import Svyaz from '../svyaz/Svyaz';
 import Btn from '../Btn/Btn';
 
-
 function MainPage(): JSX.Element {
   const [text, setText] = useState('УСЛУГИ');
   const [textp, setTextP] = useState('ТОВАРЫ');
@@ -31,8 +30,8 @@ function MainPage(): JSX.Element {
       <Header text={sl} />
       <SliderPhoto />
 
-      <Svyaz/>
-      <Header text={text}/>
+      <Svyaz />
+      <Header text={text} />
       <ServiceList />
       <Header text={textp} />
       <ProductList />

@@ -1,6 +1,5 @@
 import React from 'react';
 import { MDBFooter } from 'mdb-react-ui-kit';
-import MapYandex from '../map/Map';
 import './footer.css';
 
 function Footer(): JSX.Element {
@@ -34,9 +33,9 @@ function Footer(): JSX.Element {
           </symbol>
         </svg>
 
-        <div style={{ display: 'flex', alignItems:"center"}}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
           <div>
-            <img src="logo.jpg" style={{ width: '150px', height: '150px', borderRadius:"50%"}} />
+            <img src="logo.jpg" style={{ width: '150px', height: '150px', borderRadius: '50%' }} alt="logo" />
           </div>
           <div
             style={{
@@ -45,7 +44,7 @@ function Footer(): JSX.Element {
               flexDirection: 'row',
               alignItems: 'stretch',
               justifyContent: 'space-around',
-              width:"600px"
+              width: '600px'
             }}
           >
             <div
@@ -54,12 +53,12 @@ function Footer(): JSX.Element {
                 color: 'white',
                 flexDirection: 'column',
                 justifyContent: 'space-around',
-        
+
               }}
             >
-              <div className='textFot'>+7 982 410 8293</div>
-              <div className='textFot'>RESOLE@YANDEX.RU</div>
-              <div className='textFot'> 12:00 - 20:00 </div>
+              <div className="textFot">+7 982 410 8293</div>
+              <div className="textFot">RESOLE@YANDEX.RU</div>
+              <div className="textFot"> 12:00 - 20:00 </div>
             </div>
             <div
               style={{
@@ -69,20 +68,21 @@ function Footer(): JSX.Element {
                 justifyContent: 'space-around',
               }}
             >
-              <div className='textFot'><a href='/#products' style={{color: 'white'}}>ТОВАРЫ</a></div>
-              <div className='textFot'><a href='/#services' style={{color: 'white'}}>УСЛУГИ</a></div>
-              <div className='textFot'><a href='/#doposle' style={{color: 'white'}}>ДО/ПОСЛЕ</a></div>
-              <div className='textFot'><a href='/#contacts' style={{color: 'white'}}>КОНТАКТЫ</a></div>
+              <div className="textFot"><a href="/#products" style={{ color: 'white' }}>ТОВАРЫ</a></div>
+              <div className="textFot"><a href="/#services" style={{ color: 'white' }}>УСЛУГИ</a></div>
+              <div className="textFot"><a href="/#doposle" style={{ color: 'white' }}>ДО/ПОСЛЕ</a></div>
+              <div className="textFot"><a href="/#contacts" style={{ color: 'white' }}>КОНТАКТЫ</a></div>
             </div>
           </div>
-          <div style={{margin:""}}>
+          <div style={{ margin: '' }}>
             <img
               className="tn-atom__img t-img loaded"
               data-original="https://static.tildacdn.com/tild3035-3736-4335-a539-613938626365/HorizontalLogos5.png"
               src="https://thumb.tildacdn.com/tild3035-3736-4335-a539-613938626365/-/resize/856x/-/format/webp/HorizontalLogos5.png"
+              alt="atom"
             />
           </div>
-          <div style={{width:"200px", color:"white"}}>Made by Elbrus Bears 2023-{new Date().getFullYear()}</div>
+          <div style={{ width: '200px', color: 'white' }}>Made by Elbrus Bears 2023-{new Date().getFullYear()}</div>
         </div>
       </div>
     </MDBFooter>

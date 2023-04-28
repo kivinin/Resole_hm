@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useAppDispatch } from '../../store';
 import { postClient } from '../../json/jsonSlice';
-import "./ModalCart.css"
+import './ModalCart.css';
+
 function ModalSvyaz(): JSX.Element {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
@@ -23,19 +24,19 @@ function ModalSvyaz(): JSX.Element {
         <h1 style={{ fontSize: '30px', marginBottom: '30px' }}>
           Бесплатная консультация
         </h1>
-        <div className="col-auto" style={{width:"400px"}}>
-          <label className="visually-hidden" >name</label>
+        <div className="col-auto" style={{ width: '400px' }}>
+          <label className="visually-hidden">name</label>
           <input
             onChange={(e) => setName(e.target.value)}
             value={name}
             type="name"
             className="form-control"
             placeholder="Имя"
-            style={{width:"380px"}}
+            style={{ width: '380px' }}
           />
         </div>
-        <div className="col-auto" style={{width:"400px"}}>
-          <label className="visually-hidden"  >number</label>
+        <div className="col-auto" style={{ width: '400px' }}>
+          <label className="visually-hidden">number</label>
           <input
             type="tel"
             id="phone"
@@ -46,7 +47,7 @@ function ModalSvyaz(): JSX.Element {
             placeholder="+7-999-999-9999"
             onChange={(e) => setNumber(e.target.value)}
             value={number}
-            style={{width:"380px"}}
+            style={{ width: '380px' }}
           />
         </div>
         <div className="col-auto">
@@ -63,8 +64,8 @@ function ModalSvyaz(): JSX.Element {
             Отправить заявку
           </button>
         </div>
-        <div style={{display:"flex", justifyContent:"space-around"}}>
-        <div style={{width:"270px", color:"black", fontSize:"12px"}}>
+        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+        <div style={{ width: '270px', color: 'black', fontSize: '12px' }}>
           Нажимая кнопку «Отправить», я даю свое согласие на обработку моих
           персональных данных, в соответствии с Федеральным законом от
           27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для

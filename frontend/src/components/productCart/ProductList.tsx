@@ -8,12 +8,13 @@ function ProductList(): JSX.Element {
   const { products } = useSelector((store: RootState) => store.products);
 
   return (
-    <div id='products'
+    <div
+      id="products"
       style={{
         display: 'flex',
         justifyContent: 'space-around',
         margin: '100px 0 0 0',
-        // paddingTop: '80px',   
+        // paddingTop: '80px',
         // marginTop: '-80px',
       }}
       className={styles.productList__container}
