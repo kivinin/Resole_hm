@@ -1,15 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../store';
 import SerchOrderItem from './SerchOrderItem';
 import ServicesForAdminList from '../servicesForAdmin/ServicesForAdminList';
 import ProductForAdminList from '../productsForAdmin/ProductForAdminList';
+import { useNavigate } from 'react-router';
 
 function SerchOrderList(): JSX.Element {
   // eslint-disable-next-line @typescript-eslint/naming-convention
   const { service_orders } = useSelector(
     (store: RootState) => store.service_orders
   );
+  const navigate = useNavigate();
+  const { user } = useSelector((store: RootState) => store.auth);
+  useEffect(() => {
+    console.log();
+
+    if (!('id' in user)) {
+      navigate('/');
+    }
+  }, [user]);
+  console.log(user);
+
   return (
     <>
       <br></br>
