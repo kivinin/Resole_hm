@@ -36,34 +36,58 @@ function Swiper22(): JSX.Element {
         className="swiper_container"
       >
         <SwiperSlide>
-          <img src="photo10.jpg" alt="slide_image" />
+          <img
+            src="https://thumb.tildacdn.com/tild3466-3130-4761-b338-313232343335/-/format/webp/7.jpg"
+            alt="slide_image"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="photo9.jpg" alt="slide_image" />
+          <img
+            src="https://thumb.tildacdn.com/tild3265-3130-4461-a136-323830363562/-/format/webp/6.jpg"
+            alt="slide_image"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="photo8.jpg" alt="slide_image" />
+          <img
+            src="https://thumb.tildacdn.com/tild3661-3166-4865-b361-323339346238/-/format/webp/5TXZ-LeuWf4.jpg"
+            alt="slide_image"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="photo7.jpg" alt="slide_image" />
+          <img
+            src="https://thumb.tildacdn.com/tild6661-6432-4338-b636-333837313133/-/format/webp/6Y9Jg_mJeb8.jpg"
+            alt="slide_image"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="photo6.jpg" alt="slide_image" />
+          <img
+            src="https://solefresh.ru/spb/wp-content/uploads/sites/10/2021/10/%D0%A5%D0%B8%D0%BC%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0_%D0%BA%D1%80%D0%BE%D1%81%D1%81%D0%BE%D0%B2%D0%BE%D0%BA_34-1.jpg"
+            alt="slide_image"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="photo5.jpg" alt="slide_image" />
+          <img
+            src="https://solefresh.ru/spb/wp-content/uploads/sites/10/2021/10/%D0%A5%D0%B8%D0%BC%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0_%D0%BA%D1%80%D0%BE%D1%81%D1%81%D0%BE%D0%B2%D0%BE%D0%BA_35-1.jpg"
+            alt="slide_image"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="photo4.jpg" alt="slide_image" />
+          <img
+            src="https://solefresh.ru/spb/wp-content/uploads/sites/10/2021/10/%D0%A5%D0%B8%D0%BC%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0_%D0%BA%D1%80%D0%BE%D1%81%D1%81%D0%BE%D0%B2%D0%BE%D0%BA_15-1.jpg"
+            alt="slide_image"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="photo3.jpg" alt="slide_image" />
+          <img
+            src="https://solefresh.ru/spb/wp-content/uploads/sites/10/2021/10/%D0%A5%D0%B8%D0%BC%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0_%D0%BA%D1%80%D0%BE%D1%81%D1%81%D0%BE%D0%B2%D0%BE%D0%BA_11-1.jpg"
+            alt="slide_image"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="photo2.jpg" alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="photo1.jpg" alt="slide_image" />
+          <img
+            src="https://thumb.tildacdn.com/tild3739-3364-4763-b936-336437613433/-/format/webp/5.jpg"
+            alt="slide_image"
+          />
         </SwiperSlide>
       </Swiper>
     </div>
