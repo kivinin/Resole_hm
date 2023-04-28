@@ -44,7 +44,7 @@ function ModalSearchOrder({
           ПРОВЕРИТЬ ЗАКАЗ
         </h1>
         <div className="col-auto">
-          <label className="visually-hidden" >Ваш заказ:</label>
+          <label className="visually-hidden">Ваш заказ:</label>
           <input
             id="phone"
             name="phone"
@@ -58,7 +58,14 @@ function ModalSearchOrder({
         <div className="col-auto">
           {resSearch?.length &&
             resSearch.map((el) => (
-              <div style={{border:"1px solid", padding:"10px", margin:"10px", borderRadius:"20px"}}>
+              <div
+                style={{
+                  border: '1px solid',
+                  padding: '10px',
+                  margin: '10px',
+                  borderRadius: '20px',
+                }}
+              >
                 <img
                   alt=""
                   src={el.before_img}

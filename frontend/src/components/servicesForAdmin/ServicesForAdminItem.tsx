@@ -1,7 +1,7 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useAppDispatch } from '../../store';
 import { removeService } from '../../json/jsonSlice';
-import { useNavigate } from 'react-router-dom';
 
 function ServicesForAdminItem({
   service,

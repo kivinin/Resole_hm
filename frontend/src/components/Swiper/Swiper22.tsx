@@ -13,11 +13,14 @@ function Swiper22(): JSX.Element {
   return (
     <div id='doposle' className="container">
       <Swiper
-        effect={'coverflow'}
+        effect="coverflow"
+        // eslint-disable-next-line react/jsx-boolean-value
         grabCursor={true}
+        // eslint-disable-next-line react/jsx-boolean-value
         centeredSlides={true}
+        // eslint-disable-next-line react/jsx-boolean-value
         loop={true}
-        slidesPerView={'auto'}
+        slidesPerView="auto"
         coverflowEffect={{
           rotate: 0,
           stretch: 0,

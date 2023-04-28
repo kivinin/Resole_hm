@@ -22,13 +22,11 @@ function ModalCart({ clickModal }: { clickModal: () => void }): JSX.Element {
 
   return (
     <div className="modalkaD">
-  
       <form onSubmit={onHandleSubmit}>
-        
         <h1 style={{ fontSize: '40px', marginBottom: '30px' }}>Корзина</h1>
         {carts.map((product) => (
-        <ModalCartItem key={product.id} product={product} />
-      ))}
+          <ModalCartItem key={product.id} product={product} />
+        ))}
 
         <div className="col-auto">
           <label className="visually-hidden">name</label>
@@ -55,7 +53,7 @@ function ModalCart({ clickModal }: { clickModal: () => void }): JSX.Element {
           />
         </div>
         <div className="col-auto">
-        <button
+          <button
             type="submit"
             className="btn btn-outline-secondary"
             style={{
@@ -71,7 +69,7 @@ function ModalCart({ clickModal }: { clickModal: () => void }): JSX.Element {
         <button
           className="btn btn-outline-secondary"
           type="button"
-          style={{width:"400px"}}
+          style={{ width: '400px' }}
           onClick={clickModal}
         >
           закрыть

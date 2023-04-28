@@ -19,7 +19,7 @@ function ProductList(): JSX.Element {
       className={styles.productList__container}
     >
       {products.map((product) => (
-        <ProductItem key={product.id } product={product} />
+        <ProductItem key={product.id} product={product} />
       ))}
     </div>
   );

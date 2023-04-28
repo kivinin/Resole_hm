@@ -1,6 +1,6 @@
 import React from 'react';
-import { useAppDispatch } from '../../store';
 import { useNavigate } from 'react-router-dom';
+import { useAppDispatch } from '../../store';
 import { removeProduct } from '../../json/jsonSlice';
 
 function ProductForAdminItem({
