@@ -72,19 +72,11 @@ function Footer(): JSX.Element {
                 justifyContent: 'space-around',
               }}
             >
-              <div className="textFot">КОНТАКТЫ </div>
-              <div className="textFot">УСЛУГИ</div>
-              <div className="textFot">ДО/ПОСЛЕ</div>
-              <div className="textFot">ОТЗЫВЫ</div>
+              <div className='textFot'><a href='/#products' style={{color: 'white'}}>ТОВАРЫ</a></div>
+              <div className='textFot'><a href='/#services' style={{color: 'white'}}>УСЛУГИ</a></div>
+              <div className='textFot'><a href='/#doposle' style={{color: 'white'}}>ДО/ПОСЛЕ</a></div>
+              <div className='textFot'><a href='/#contacts' style={{color: 'white'}}>КОНТАКТЫ</a></div>
             </div>
-            <div
-              style={{
-                display: 'flex',
-                color: 'white',
-                flexDirection: 'column',
-                justifyContent: 'space-around',
-              }}
-            >
             </div>
           </div>
           <div style={{ margin: '' }}>
