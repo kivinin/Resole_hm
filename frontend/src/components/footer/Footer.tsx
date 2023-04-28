@@ -54,6 +54,7 @@ function Footer(): JSX.Element {
                 color: 'white',
                 flexDirection: 'column',
                 justifyContent: 'space-around',
+        
               }}
             >
               <div className='textFot'>+7 982 410 8293</div>
@@ -86,7 +87,7 @@ function Footer(): JSX.Element {
               <div className='textFot'>ОТЗЫВЫ</div>
             </div>
           </div>
-          <div style={{margin:"0 0 0 400px "}}>
+          <div style={{margin:""}}>
             <img
               className="tn-atom__img t-img loaded"
               data-original="https://static.tildacdn.com/tild3035-3736-4335-a539-613938626365/HorizontalLogos5.png"

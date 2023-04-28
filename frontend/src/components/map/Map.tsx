@@ -23,7 +23,7 @@ function MapYandex(): JSX.Element {
           <div className='textFooter'>+7 982 410 8293</div>
           <div className='textFooter'>@resole86</div>
         </div>
-        <div className='textFooter'>по будням 12.00 - 20.00</div>
+        <div className='textFooter'>12.00 - 20.00</div>
         <div className='textFooter' style={{width:"600px"}}>
           Мы сами забираем и доставляем ваши изделия обратно. <br />
           По данному адресу можно сдать изделия только по предварительной

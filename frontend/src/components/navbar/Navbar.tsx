@@ -30,9 +30,9 @@ function Navbar(): JSX.Element {
               position: 'absolute',
               color: '#b1fbe2',
               fontSize: '8rem',
-              left: '47%',
+              left: '49%',
               bottom: '-59%',
-              letterSpacing: '40px',
+              letterSpacing: '30px',
               opacity: '0.7',
             }}
           >
@@ -43,9 +43,9 @@ function Navbar(): JSX.Element {
               position: 'absolute',
               color: '#b1fbe2',
               fontSize: '8rem',
-              left: '46.5%',
+              left: '48.5%',
               bottom: '-59%',
-              letterSpacing: '40px',
+              letterSpacing: '30px',
               opacity: '0.7',
             }}
           >
@@ -102,16 +102,6 @@ function Navbar(): JSX.Element {
                 </a>
                 <a className="nav-link disabled"> </a>
               </div>
-              <div className="navbar-nav">
-                <a
-                  className="nav-link active zPov"
-                  aria-current="page"
-                  href="#"
-                >
-                  КОНТАКТЫ
-                </a>
-                <a className="nav-link disabled"> </a>
-              </div>
               {modall ? (
                 <div className="navbar-nav">
                   <ModalSearchOrder clickModall={clickModall} />
@@ -120,7 +110,7 @@ function Navbar(): JSX.Element {
               ) : (
                 <button
                   type="button"
-                  style={{ left: '900px', position: 'relative',  color:"white" }}
+                  style={{ border: 'none', margin: '0 20px 0 0'}}
                   className="nav-link active zPov"
                   onClick={clickModall}
                 >
