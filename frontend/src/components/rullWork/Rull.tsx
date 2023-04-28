@@ -1,10 +1,17 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import './Rull.css';
+
 function Rull(): JSX.Element {
   return (
-
     <div className="borderRull">
-      <div style={{ fontSize: '50px', margin: '100px 0 100px 0',fontWeight:"700"}}>
+      <div
+        style={{
+          fontSize: '50px',
+          margin: '100px 0 100px 0',
+          fontWeight: '700',
+        }}
+      >
         КАК МЫ РАБОТАЕМ
       </div>
       <div className="stepper-wrapper">
@@ -14,11 +21,16 @@ function Rull(): JSX.Element {
           </div>
           <img src="client.svg" className="imgStep" />
 
-          <div className="step-name" style={{ fontSize: '35px', color:"#b1fbe2", fontWeight:"900" }}>
+          <div
+            className="step-name"
+            style={{ fontSize: '35px', color: '#b1fbe2', fontWeight: '900' }}
+          >
             ЗАБИРАЕМ
           </div>
-          <div className="step-name" style={{ width: '350px', fontSize:"22px"}}>
-
+          <div
+            className="step-name"
+            style={{ width: '350px', fontSize: '22px' }}
+          >
             Бесплатная доставка по городу Согласовываем с вами все работы после
             осмотра изделий технологом
           </div>
@@ -29,12 +41,23 @@ function Rull(): JSX.Element {
           </div>
           <img src="brush.svg" className="imgStep" />
 
-          <div className="step-name" style={{ fontSize: '35px', color:"#b1fbe2", fontWeight:"900", margin:" 0 150px 0 0" }}>
-          ВОССТАНАВЛИВАЕМ
+          <div
+            className="step-name"
+            style={{
+              fontSize: '35px',
+              color: '#b1fbe2',
+              fontWeight: '900',
+              margin: ' 0 150px 0 0',
+            }}
+          >
+            ВОССТАНАВЛИВАЕМ
           </div>
-          <div className="step-name" style={{ width: '350px', fontSize:"22px" }}>
-          Оплачиваете согласованные работы и мы приступаем к их выполнению, пока вы занимаетесь своими делами
-
+          <div
+            className="step-name"
+            style={{ width: '350px', fontSize: '22px' }}
+          >
+            Оплачиваете согласованные работы и мы приступаем к их выполнению,
+            пока вы занимаетесь своими делами
           </div>
         </div>
         <div className="stepper-item">
@@ -43,12 +66,18 @@ function Rull(): JSX.Element {
           </div>
           <img src="delevery.svg" className="imgStep" />
 
-          <div className="step-name" style={{ fontSize: '35px', color:"#b1fbe2", fontWeight:"900" }}>
-          ПРИВОЗИМ
+          <div
+            className="step-name"
+            style={{ fontSize: '35px', color: '#b1fbe2', fontWeight: '900' }}
+          >
+            ПРИВОЗИМ
           </div>
-          <div className="step-name" style={{ width: '350px', fontSize:"22px" }}>
-          Отправляем фото результата перед отправкой готового заказа и доставляем обратно
-
+          <div
+            className="step-name"
+            style={{ width: '350px', fontSize: '22px' }}
+          >
+            Отправляем фото результата перед отправкой готового заказа и
+            доставляем обратно
           </div>
         </div>
         <div className="stepper-item">
@@ -57,12 +86,18 @@ function Rull(): JSX.Element {
           </div>
           <img src="application.svg" className="imgStep" />
 
-          <div className="step-name" style={{ fontSize: '35px', color:"#b1fbe2", fontWeight:"900" }}>
-          ГАРАНТИЯ
+          <div
+            className="step-name"
+            style={{ fontSize: '35px', color: '#b1fbe2', fontWeight: '900' }}
+          >
+            ГАРАНТИЯ
           </div>
-          <div className="step-name" style={{ width: '350px', fontSize:"22px" }}>
-          Оказываем постоянную online поддержку и не бросаем вас даже после выполненных работ
-
+          <div
+            className="step-name"
+            style={{ width: '350px', fontSize: '22px' }}
+          >
+            Оказываем постоянную online поддержку и не бросаем вас даже после
+            выполненных работ
           </div>
         </div>
       </div>

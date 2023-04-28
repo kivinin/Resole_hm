@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router';
 import { RootState } from '../../store';
 import SerchOrderItem from './SerchOrderItem';
 import ServicesForAdminList from '../servicesForAdmin/ServicesForAdminList';
 import ProductForAdminList from '../productsForAdmin/ProductForAdminList';
-import { useNavigate } from 'react-router';
 
 function SerchOrderList(): JSX.Element {
   // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -24,13 +24,13 @@ function SerchOrderList(): JSX.Element {
 
   return (
     <>
-      <br></br>
-      <br></br>
+      <br />
+      <br />
       <p className="fs-1 fw-bold" style={{ color: 'black' }}>
         ЗАКАЗЫ
       </p>
-      <br></br>
-      <br></br>
+      <br />
+      <br />
       <table className="table">
         <thead>
           <tr>
@@ -53,25 +53,25 @@ function SerchOrderList(): JSX.Element {
           ))}
         </tbody>
       </table>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
+      <br />
+      <br />
+      <br />
+      <br />
       <p className="fs-1 fw-bold" style={{ color: 'black' }}>
         СЕРВИСЫ
       </p>
-      <br></br>
-      <br></br>
+      <br />
+      <br />
       <ServicesForAdminList />
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
+      <br />
+      <br />
+      <br />
+      <br />
       <p className="fs-1 fw-bold" style={{ color: 'black' }}>
         ПРОДУКТЫ
       </p>
-      <br></br>
-      <br></br>
+      <br />
+      <br />
       <ProductForAdminList />
     </>
   );

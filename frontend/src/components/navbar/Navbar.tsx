@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from 'react';
 import './StyleNavbar.css';
 import { useSelector } from 'react-redux';
@@ -8,6 +9,7 @@ import { logoutUser } from '../Auth/authSlice';
 import ModalSearchOrder from '../ModalSearchOrder/ModalSearchOrder';
 
 function Navbar(): JSX.Element {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { carts } = useSelector((store: RootState) => store.carts);
   const { user } = useSelector((store: RootState) => store.auth);
   const [modal, setModal] = useState(false);
@@ -110,7 +112,7 @@ function Navbar(): JSX.Element {
               ) : (
                 <button
                   type="button"
-                  style={{ border: 'none', margin: '0 20px 0 0'}}
+                  style={{ border: 'none', margin: '0 20px 0 0' }}
                   className="nav-link active zPov"
                   onClick={clickModall}
                 >
