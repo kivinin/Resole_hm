@@ -17,7 +17,7 @@ function Rull(): JSX.Element {
           <div className="step-name" style={{ fontSize: '35px', color:"#b1fbe2", fontWeight:"900" }}>
             ЗАБИРАЕМ
           </div>
-          <div className="step-name" style={{ width: '350px', fontSize:"25px"}}>
+          <div className="step-name" style={{ width: '350px', fontSize:"22px"}}>
 
             Бесплатная доставка по городу Согласовываем с вами все работы после
             осмотра изделий технологом
@@ -32,7 +32,7 @@ function Rull(): JSX.Element {
           <div className="step-name" style={{ fontSize: '35px', color:"#b1fbe2", fontWeight:"900", margin:" 0 150px 0 0" }}>
           ВОССТАНАВЛИВАЕМ
           </div>
-          <div className="step-name" style={{ width: '350px', fontSize:"25px" }}>
+          <div className="step-name" style={{ width: '350px', fontSize:"22px" }}>
           Оплачиваете согласованные работы и мы приступаем к их выполнению, пока вы занимаетесь своими делами
 
           </div>
@@ -46,7 +46,7 @@ function Rull(): JSX.Element {
           <div className="step-name" style={{ fontSize: '35px', color:"#b1fbe2", fontWeight:"900" }}>
           ПРИВОЗИМ
           </div>
-          <div className="step-name" style={{ width: '350px', fontSize:"25px" }}>
+          <div className="step-name" style={{ width: '350px', fontSize:"22px" }}>
           Отправляем фото результата перед отправкой готового заказа и доставляем обратно
 
           </div>
@@ -60,7 +60,7 @@ function Rull(): JSX.Element {
           <div className="step-name" style={{ fontSize: '35px', color:"#b1fbe2", fontWeight:"900" }}>
           ГАРАНТИЯ
           </div>
-          <div className="step-name" style={{ width: '350px', fontSize:"25px" }}>
+          <div className="step-name" style={{ width: '350px', fontSize:"22px" }}>
           Оказываем постоянную online поддержку и не бросаем вас даже после выполненных работ
 
           </div>
