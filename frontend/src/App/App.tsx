@@ -1,6 +1,6 @@
-/* eslint-disable import/order */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Route, Routes } from 'react-router';
+import React, { useEffect, useState, Fragment } from 'react';
 
 import './App.css';
 import MainPage from '../components/main/MainPage';
@@ -12,7 +12,6 @@ import Login from '../components/Auth/Login';
 import SerchOrderList from '../components/SerchOrder/SerchOrderList';
 import { getServiceOrders } from '../components/SerchOrder/SerchOrderSlice';
 import UpdateFormOrderItem from '../components/SerchOrder/UpdateFormOrderItem';
-import React, { useEffect, useState, Fragment } from 'react';
 import { Container, ProgressBar, ScrollContent, Heading } from './Styles';
 import NotFound from '../components/404/NotFound';
 import UpdateFormServiceForAdmin from '../components/servicesForAdmin/UpdateFormServiceForAdmin';

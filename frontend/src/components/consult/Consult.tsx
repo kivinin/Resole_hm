@@ -10,7 +10,7 @@ function Consult(): JSX.Element {
         </div>
         <div className="textCon">Отправьте фото изделий для оценки работ</div>
       </div>
-      <a href='https://t.me/Resole86'>
+      <a href="https://t.me/Resole86">
       <button
         type="submit"
         className="btn btn-outline-secondary"

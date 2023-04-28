@@ -1,10 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable react/self-closing-comp */
-/* eslint-disable react/function-component-definition */
-import React, { useState, Fragment } from 'react';
+import React, { useState } from 'react';
 import { Container, ProgressBar, ScrollContent, Heading } from './Styles';
 
-const ScrollIndicator = (): JSX.Element => {
+function ScrollIndicator(): JSX.Element {
   const [scroll, setScroll] = useState(0);
 
   const onScroll = (): void => {
@@ -18,7 +16,7 @@ const ScrollIndicator = (): JSX.Element => {
 
   window.addEventListener('scroll', onScroll);
 
-  return <ProgressBar style={{ width: `${scroll}%` }}></ProgressBar>;
-};
+  return <ProgressBar style={{ width: `${scroll}%` }} />;
+}
 
 export default ScrollIndicator;
