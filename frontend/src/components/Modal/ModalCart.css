@@ -10,6 +10,7 @@
   width: 600px;
   height: 600px;
   outline: 2px solid #000;
+  opacity: 1 !important;
 }
 .modalkaD{
   z-index: 999999;
@@ -24,6 +25,7 @@
   width: 600px;
   height: 600px;
   outline: 2px solid #000;
+  opacity: 1 !important;
 }
 .form-control {
   margin: 10px;
