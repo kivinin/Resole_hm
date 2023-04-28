@@ -86,7 +86,7 @@ function ModalOrder({ clickModal }: { clickModal: () => void }): JSX.Element {
         <button
           className="btn btn-outline-secondary"
           type="button"
-          style={{width:"400px"}}
+          style={{ width: '400px' }}
           onClick={clickModal}
         >
           закрыть

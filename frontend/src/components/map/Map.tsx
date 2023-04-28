@@ -1,9 +1,10 @@
 import React from 'react';
 import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
-import "./Map.css"
+import './Map.css';
+
 function MapYandex(): JSX.Element {
   return (
-    <div style={{ display: 'flex' }}>
+    <div id='contacts' style={{ display: 'flex' }}>
       <div
         style={{
           display: 'flex',
@@ -17,14 +18,14 @@ function MapYandex(): JSX.Element {
           opacity: '0.8',
         }}
       >
-        <div style={{ fontSize: '40px', margin:"20px" }}>Контакты</div>
+        <div style={{ fontSize: '40px', margin: '20px' }}>Контакты</div>
         <div>
-          <div className='textFooter'>г. Ханты-Мансийск</div>
-          <div className='textFooter'>+7 982 410 8293</div>
-          <div className='textFooter'>@resole86</div>
+          <div className="textFooter">г. Ханты-Мансийск</div>
+          <div className="textFooter">+7 982 410 8293</div>
+          <div className="textFooter">@resole86</div>
         </div>
-        <div className='textFooter'>12.00 - 20.00</div>
-        <div className='textFooter' style={{width:"600px"}}>
+        <div className="textFooter">12.00 - 20.00</div>
+        <div className="textFooter" style={{ width: '600px' }}>
           Мы сами забираем и доставляем ваши изделия обратно. <br />
           По данному адресу можно сдать изделия только по предварительной
           договоренности.
@@ -45,7 +46,6 @@ function MapYandex(): JSX.Element {
             <Placemark defaultGeometry={[60.998665, 69.062532]} />
           </Map>
         </YMaps>
-
       </div>
     </div>
   );

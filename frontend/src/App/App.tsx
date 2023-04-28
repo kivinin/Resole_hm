@@ -1,3 +1,5 @@
+/* eslint-disable import/order */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Route, Routes } from 'react-router';
 
 import './App.css';
@@ -39,7 +41,7 @@ function App(): JSX.Element {
   }, [dispatch]);
   const [scroll, setScroll] = useState(0);
 
-  const onScroll = () => {
+  const onScroll = (): void => {
     const Scrolled = document.documentElement.scrollTop;
     const MaxHeight =
       document.documentElement.scrollHeight -

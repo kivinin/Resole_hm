@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react';
 import Video from '../features/Video/Video';
 import SliderPhoto from '../features/SliderPhoto/SliderPhoto';
@@ -14,31 +15,35 @@ import Header from '../Text/Header';
 import Consult from '../consult/Consult';
 import Present from '../windowPresent/Present';
 import Svyaz from '../svyaz/Svyaz';
-// import ModalOrder from '../Modal/ModalOrder';
+import Btn from '../Btn/Btn';
+
 
 function MainPage(): JSX.Element {
-  const [text, setText] = useState("УСЛУГИ")
-  const [textp, setTextP] = useState("ТОВАРЫ")
-  const [ex, setEx] = useState("ПРИМЕРЫ НАШИХ РАБОТ")
-  const [sl, setSL] = useState("ПОПРОБУЙ САМ")
+  const [text, setText] = useState('УСЛУГИ');
+  const [textp, setTextP] = useState('ТОВАРЫ');
+  const [ex, setEx] = useState('ПРИМЕРЫ НАШИХ РАБОТ');
+  const [sl, setSL] = useState('ПОПРОБУЙ САМ');
   return (
     <div>
       <Video />
       {/* <Present/> */}
       <TextComp />
-      <Header text={sl}/>
+      <Header text={sl} />
       <SliderPhoto />
+
       <Svyaz/>
       <Header text={text}/>
+      <Header text={text} />
       <ServiceList />
-      <Header text={textp}/>
+      <Header text={textp} />
       <ProductList />
-      <Header text={ex}/>
+      <Header text={ex} />
       <Swiper22 />
-      <Consult/>
+      <Consult />
       <Rull />
       <MapYandex />
       <FeedBack />
+      <Btn />
       <Footer />
     </div>
   );

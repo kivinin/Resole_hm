@@ -119,3 +119,8 @@
 .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--primary);
 }
+
+#doposle {
+  padding-top: 80px;    
+   margin-top: -80px;
+}

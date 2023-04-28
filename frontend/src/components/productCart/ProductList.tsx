@@ -8,16 +8,18 @@ function ProductList(): JSX.Element {
   const { products } = useSelector((store: RootState) => store.products);
 
   return (
-    <div
+    <div id='products'
       style={{
         display: 'flex',
         justifyContent: 'space-around',
         margin: '100px 0 0 0',
+        // paddingTop: '80px',   
+        // marginTop: '-80px',
       }}
       className={styles.productList__container}
     >
       {products.map((product) => (
-        <ProductItem key={product.id } product={product} />
+        <ProductItem key={product.id} product={product} />
       ))}
     </div>
   );
