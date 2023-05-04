@@ -21,15 +21,13 @@ function MainPage(): JSX.Element {
   const [text, setText] = useState('УСЛУГИ');
   const [textp, setTextP] = useState('ТОВАРЫ');
   const [ex, setEx] = useState('ПРИМЕРЫ НАШИХ РАБОТ');
-  const [sl, setSL] = useState('ПОПРОБУЙ САМ');
+  const [sl, setSL] = useState('Пробуйте сами');
   return (
     <div>
       <Video />
-      {/* <Present/> */}
       <TextComp />
       <Header text={sl} />
       <SliderPhoto />
-
       <Svyaz />
       <Header text={text} />
       <ServiceList />
