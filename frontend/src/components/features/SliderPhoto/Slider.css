@@ -1,10 +1,6 @@
 .mainWrapper {
-  width: 1000px;
-  height: calc(100vh - 170px);
-  position: relative;
-  left: 21%;
-  align-content: center;
-  position: relative;
+  width: 800px;
+  margin:0 auto;
   top: 150px;
 }
 .before-after-slider {

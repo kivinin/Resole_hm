@@ -4,7 +4,7 @@ function Header({ text }: { text: String }): JSX.Element {
   return (
     <div>
       <div
-        style={{ fontSize: '50px', fontWeight: '700', margin: '150px 0 0 0' }}
+        style={{ fontSize: '50px', fontWeight: '700', margin: '200px 0 30px 0' }}
       >
         {text}
       </div>
